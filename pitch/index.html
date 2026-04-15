@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tu negocio en internet — Santa Clara del Mar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --negro: #111;
+      --blanco: #fff;
+      --gris-claro: #f7f6f3;
+      --gris-medio: #e8e4dc;
+      --gris-texto: #666;
+      --acento: #1a1a1a;
+      --dorado: #c9a84c;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--blanco);
+      color: var(--negro);
+      line-height: 1.6;
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--negro);
+      color: var(--blanco);
+      padding: 4rem 1.5rem 3rem;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.3);
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.9rem;
+      border-radius: 2px;
+      margin-bottom: 1.5rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 span { color: var(--dorado); }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.65);
+      max-width: 480px;
+      margin: 0 auto 2rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--dorado);
+      color: var(--negro);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.9rem 2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .btn-primary:hover { opacity: 0.85; }
+
+    /* PROPUESTA */
+    .propuesta {
+      background: var(--gris-claro);
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gris-texto);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 5vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .section-sub {
+      color: var(--gris-texto);
+      max-width: 500px;
+      margin: 0 auto 2.5rem;
+      font-size: 0.95rem;
+    }
+
+    .puntos {
+      display: grid;
+      gap: 1rem;
+      max-width: 560px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .punto {
+      background: var(--blanco);
+      border-radius: 6px;
+      padding: 1.1rem 1.2rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .punto-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--dorado);
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .punto-titulo {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .punto-desc {
+      font-size: 0.85rem;
+      color: var(--gris-texto);
+    }
+
+    /* DEMOS */
+    .demos {
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    .demos-grid {
+      display: grid;
+      gap: 1rem;
+      margin-top: 2rem;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .demo-card {
+      border: 1px solid var(--gris-medio);
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: left;
+      text-decoration: none;
+      color: var(--negro);
+      display: block;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .demo-card:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+
+    .demo-preview {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .demo-info {
+      padding: 1rem 1.1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .demo-rubro {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gris-texto);
+      margin-bottom: 0.2rem;
+    }
+
+    .demo-nombre {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .demo-link {
+      font-size: 0.8rem;
+      color: var(--dorado);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* PRECIOS */
+    .precios {
+      background: var(--negro);
+      color: var(--blanco);
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    .precios .section-label { color: rgba(255,255,255,0.4); }
+    .precios .section-title { color: var(--blanco); }
+    .precios .section-sub { color: rgba(255,255,255,0.55); }
+
+    .precios-grid {
+      display: grid;
+      gap: 1rem;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .precio-card {
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: left;
+    }
+
+    .precio-card.destacado {
+      border-color: var(--dorado);
+      background: rgba(201,168,76,0.08);
+    }
+
+    .precio-tag {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--dorado);
+      margin-bottom: 0.8rem;
+    }
+
+    .precio-monto {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--blanco);
+      margin-bottom: 0.2rem;
+    }
+
+    .precio-monto span {
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .precio-desc {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 1rem;
+    }
+
+    .precio-items {
+      list-style: none;
+      display: grid;
+      gap: 0.4rem;
+    }
+
+    .precio-items li {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.75);
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .precio-items li::before {
+      content: "✓";
+      color: var(--dorado);
+      flex-shrink: 0;
+    }
+
+    /* CTA */
+    .cta {
+      background: var(--gris-claro);
+      padding: 3.5rem 1.5rem;
+      text-align: center;
+    }
+
+    .cta .section-title { margin-bottom: 0.8rem; }
+
+    .cta p {
+      color: var(--gris-texto);
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+
+    .btn-wpp {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #25D366;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(37,211,102,0.3);
+    }
+
+    .btn-wpp svg { width: 22px; height: 22px; }
+
+    footer {
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--gris-texto);
+      border-top: 1px solid var(--gris-medio);
+    }
+
+    @media (min-width: 560px) {
+      .precios-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">Santa Clara del Mar</div>
+    <h1>Tu negocio<br /><span>en internet</span></h1>
+    <p>Una página profesional para tu emprendimiento. Sin complicaciones, sin mensualidades caras.</p>
+    <a href="https://wa.me/5491157432540?text=Hola!%20Me%20interesa%20tener%20una%20p%C3%A1gina%20para%20mi%20negocio" class="btn-primary" target="_blank">Quiero saber más</a>
+  </section>
+
+  <!-- PROPUESTA -->
+  <section class="propuesta">
+    <p class="section-label">Cómo funciona</p>
+    <h2 class="section-title">Simple y rápido</h2>
+    <p class="section-sub">En menos de una semana tu negocio tiene presencia online real.</p>
+
+    <div class="puntos">
+      <div class="punto">
+        <div class="punto-num">1</div>
+        <div>
+          <div class="punto-titulo">Me contás tu negocio</div>
+          <div class="punto-desc">Nombre, productos o servicios, precios y tus fotos. Por WhatsApp.</div>
+        </div>
+      </div>
+      <div class="punto">
+        <div class="punto-num">2</div>
+        <div>
+          <div class="punto-titulo">Armo tu página</div>
+          <div class="punto-desc">En 2-3 días tenés una página personalizada lista para ver.</div>
+        </div>
+      </div>
+      <div class="punto">
+        <div class="punto-num">3</div>
+        <div>
+          <div class="punto-titulo">La aprobás y publicamos</div>
+          <div class="punto-desc">Queda online con tu dominio. Tus clientes empiezan a verte.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMOS -->
+  <section class="demos">
+    <p class="section-label">Ejemplos reales</p>
+    <h2 class="section-title">Mirá cómo quedan</h2>
+    <p class="section-sub" style="color:#666;max-width:480px;margin:0 auto 0;">Estas páginas las hice yo. Hacé clic para verlas.</p>
+
+    <div class="demos-grid">
+
+      <a href="https://dontiburcio.netlify.app" target="_blank" class="demo-card">
+        <img class="demo-preview"
+          src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=70"
+          alt="Pizzería demo" />
+        <div class="demo-info">
+          <div>
+            <div class="demo-rubro">Gastronomía</div>
+            <div class="demo-nombre">Don Tiburcio Pizzería</div>
+          </div>
+          <div class="demo-link">Ver demo →</div>
+        </div>
+      </a>
+
+      <a href="https://mareachic.netlify.app" target="_blank" class="demo-card">
+        <img class="demo-preview"
+          src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&q=70"
+          alt="Ropa demo" />
+        <div class="demo-info">
+          <div>
+            <div class="demo-rubro">Indumentaria</div>
+            <div class="demo-nombre">Marea Chic</div>
+          </div>
+          <div class="demo-link">Ver demo →</div>
+        </div>
+      </a>
+
+      <a href="https://baronbarberia.netlify.app" target="_blank" class="demo-card">
+        <img class="demo-preview"
+          src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=70"
+          alt="Barbería demo" />
+        <div class="demo-info">
+          <div>
+            <div class="demo-rubro">Barbería</div>
+            <div class="demo-nombre">Baron Barbería</div>
+          </div>
+          <div class="demo-link">Ver demo →</div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- PRECIOS -->
+  <section class="precios">
+    <p class="section-label">Inversión</p>
+    <h2 class="section-title">Precios claros</h2>
+    <p class="section-sub">Sin letras chicas. Sin sorpresas.</p>
+
+    <div class="precios-grid">
+
+      <div class="precio-card destacado">
+        <div class="precio-tag">Pago único</div>
+        <div class="precio-monto">$70 USD <span>una sola vez</span></div>
+        <div class="precio-desc">Tu página lista y publicada</div>
+        <ul class="precio-items">
+          <li>Diseño personalizado</li>
+          <li>Tus fotos y productos</li>
+          <li>Botón WhatsApp</li>
+          <li>Mobile y desktop</li>
+          <li>Publicada en internet</li>
+        </ul>
+      </div>
+
+      <div class="precio-card">
+        <div class="precio-tag">Mensual</div>
+        <div class="precio-monto">$5 USD <span>/ mes</span></div>
+        <div class="precio-desc">Hosting y mantenimiento</div>
+        <ul class="precio-items">
+          <li>Página siempre online</li>
+          <li>Cambios de precios</li>
+          <li>Soporte por WhatsApp</li>
+          <li>Sin contrato mínimo</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2 class="section-title">¿Arrancamos?</h2>
+    <p>Escribime por WhatsApp y en menos de una semana tu negocio está online.</p>
+    <a href="https://wa.me/5491157432540?text=Hola!%20Quiero%20una%20p%C3%A1gina%20para%20mi%20negocio" class="btn-wpp" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.625a.75.75 0 0 0 .92.921l5.84-1.498A11.955 11.955 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.943 0-3.772-.538-5.338-1.475l-.383-.227-3.967 1.018 1.05-3.863-.247-.396A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      Escribime por WhatsApp
+    </a>
+  </section>
+
+  <footer>
+    Páginas web para emprendedores · Santa Clara del Mar
+  </footer>
+
+</body>
+</html>

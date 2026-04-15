@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baron Barbería — Santa Clara del Mar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --negro: #111010;
+      --carbon: #1c1c1e;
+      --gris: #2c2c2e;
+      --dorado: #c9a84c;
+      --dorado-claro: #e8c96d;
+      --crema: #f5f0e8;
+      --texto: #e8e3db;
+      --texto-suave: #9a9590;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--negro);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 100svh;
+      min-height: 580px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2rem 1.5rem;
+      overflow: hidden;
+    }
+
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: brightness(0.45);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--dorado);
+      color: var(--negro);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 2px;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 10vw, 5rem);
+      font-weight: 900;
+      line-height: 1;
+      color: var(--crema);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero h1 span {
+      color: var(--dorado);
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--texto-suave);
+      margin-bottom: 1.8rem;
+    }
+
+    .btn-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--dorado);
+      color: var(--negro);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.9rem 1.6rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .btn-hero:hover { background: var(--dorado-claro); }
+
+    .btn-hero svg { width: 20px; height: 20px; }
+
+    /* SECCIÓN BASE */
+    section { padding: 3.5rem 1.5rem; }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--dorado);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 6vw, 2.5rem);
+      font-weight: 700;
+      color: var(--crema);
+      margin-bottom: 2rem;
+    }
+
+    /* SERVICIOS */
+    .servicios { background: var(--carbon); }
+
+    .servicios-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1px;
+      background: var(--gris);
+      border: 1px solid var(--gris);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .servicio-item {
+      background: var(--carbon);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.1rem 1.2rem;
+      gap: 1rem;
+    }
+
+    .servicio-info { flex: 1; }
+
+    .servicio-nombre {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--crema);
+      margin-bottom: 0.2rem;
+    }
+
+    .servicio-desc {
+      font-size: 0.8rem;
+      color: var(--texto-suave);
+    }
+
+    .servicio-precio {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--dorado);
+      white-space: nowrap;
+    }
+
+    .servicio-wpp {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      border: 1px solid var(--dorado);
+      color: var(--dorado);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 3px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .servicio-wpp:hover {
+      background: var(--dorado);
+      color: var(--negro);
+    }
+
+    .servicio-wpp svg { width: 14px; height: 14px; }
+
+    /* GALERÍA */
+    .galeria { background: var(--negro); }
+
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+    }
+
+    .galeria-grid img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 4px;
+      filter: grayscale(20%);
+      transition: filter 0.3s;
+    }
+
+    .galeria-grid img:hover { filter: grayscale(0%); }
+
+    .galeria-grid img:first-child {
+      grid-column: span 2;
+      aspect-ratio: 16/9;
+    }
+
+    /* INFO */
+    .info { background: var(--carbon); }
+
+    .info-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .info-card {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .info-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--gris);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .info-icon svg { width: 18px; height: 18px; color: var(--dorado); }
+
+    .info-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--texto-suave);
+      margin-bottom: 0.3rem;
+    }
+
+    .info-val {
+      font-size: 0.95rem;
+      color: var(--crema);
+      line-height: 1.5;
+    }
+
+    .info-val a {
+      color: var(--dorado);
+      text-decoration: none;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--negro);
+      border-top: 1px solid var(--gris);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--dorado);
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-sub {
+      font-size: 0.8rem;
+      color: var(--texto-suave);
+    }
+
+    /* WPP FLOTANTE */
+    .wpp-float {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #25D366;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.85rem 1.3rem;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .wpp-float:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(37,211,102,0.45);
+    }
+
+    .wpp-float svg { width: 22px; height: 22px; }
+
+    @media (min-width: 600px) {
+      .servicios-grid { grid-template-columns: 1fr 1fr; }
+      .galeria-grid { grid-template-columns: repeat(3, 1fr); }
+      .galeria-grid img:first-child { grid-column: span 3; }
+      .info-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img class="hero-img"
+      src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80"
+      alt="Baron Barbería" />
+    <div class="hero-content">
+      <span class="hero-badge">Santa Clara del Mar</span>
+      <h1>Baron<br /><span>Barbería</span></h1>
+      <p class="hero-sub">Cortes premium · Barba · Tratamientos</p>
+      <a href="https://wa.me/5492235000000?text=Hola!%20Quiero%20sacar%20un%20turno%20en%20Baron%20Barber%C3%ADa" class="btn-hero" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.625a.75.75 0 0 0 .92.921l5.84-1.498A11.955 11.955 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.943 0-3.772-.538-5.338-1.475l-.383-.227-3.967 1.018 1.05-3.863-.247-.396A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Reservar turno
+      </a>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="servicios">
+    <p class="section-label">Nuestros servicios</p>
+    <h2 class="section-title">¿Qué querés hacerte?</h2>
+    <div class="servicios-grid">
+
+      <div class="servicio-item">
+        <div class="servicio-info">
+          <div class="servicio-nombre">Corte clásico</div>
+          <div class="servicio-desc">Tijera o máquina, a tu estilo</div>
+        </div>
+        <div class="servicio-precio">$4.500</div>
+        <a href="https://wa.me/5492235000000?text=Hola!%20Quiero%20turno%20para%20Corte%20cl%C3%A1sico" class="servicio-wpp" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.625a.75.75 0 0 0 .92.921l5.84-1.498A11.955 11.955 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.943 0-3.772-.538-5.338-1.475l-.383-.227-3.967 1.018 1.05-3.863-.247-.396A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Turno
+        </a>
+      </div>
+
+      <div class="servicio-item">
+        <div class="servicio-info">
+          <div class="servicio-nombre">Corte + barba</div>
+          <div class="servicio-desc">El combo completo</div>
+        </div>
+        <div class="servicio-precio">$7.000</div>
+        <a href="https://wa.me/5492235000000?text=Hola!%20Quiero%20turno%20para%20Corte%20%2B%20barba" class="servicio-wpp" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.625a.75.75 0 0 0 .92.921l5.84-1.498A11.955 11.955 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.943 0-3.772-.538-5.338-1.475l-.383-.227-3.967 1.018 1.05-3.863-.247-.396A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Turno
+        </a>
+      </div>
+
+      <div class="servicio-item">
+        <div class="servicio-info">
+          <div class="servicio-nombre">Arreglo de barba</div>
+          <div class="servicio-desc">Perfilado y definición</div>
+        </div>
+        <div class="servicio-precio">$3.500</div>
+        <a href="https://wa.me/5492235000000?text=Hola!%20Quiero%20turno%20para%20Arreglo%20de%20barba" class="servicio-wpp" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.625a.75.75 0 0 0 .92.921l5.84-1.498A11.955 11.955 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.943 0-3.772-.538-5.338-1.475l-.383-.227-3.967 1.018 1.05-3.863-.247-.396A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Turno
+        </a>
+      </div>
+
+      <div class="servicio-item">
+        <div class="servicio-info">
+          <div class="servicio-nombre">Degradé</div>
+          <div class="servicio-desc">Low, mid o high fade</div>
+        </div>
+        <div class="servicio-precio">$5.500</div>
+        <a href="https://wa.me/5492235000000?text=Hola!%20Quiero%20turno%20para%20Degrad%C3%A9" class="servicio-wpp" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.625a.75.75 0 0 0 .92.921l5.84-1.498A11.955 11.955 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.943 0-3.772-.538-5.338-1.475l-.383-.227-3.967 1.018 1.05-3.863-.247-.396A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Turno
+        </a>
+      </div>
+
+      <div class="servicio-item">
+        <div class="servicio-info">
+          <div class="servicio-nombre">Cejas</div>
+          <div class="servicio-desc">Depilación y diseño</div>
+        </div>
+        <div class="servicio-precio">$2.000</div>
+        <a href="https://wa.me/5492235000000?text=Hola!%20Quiero%20turno%20para%20Cejas" class="servicio-wpp" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.625a.75.75 0 0 0 .92.921l5.84-1.498A11.955 11.955 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.943 0-3.772-.538-5.338-1.475l-.383-.227-3.967 1.018 1.05-3.863-.247-.396A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Turno
+        </a>
+      </div>
+
+      <div class="servicio-item">
+        <div class="servicio-info">
+          <div class="servicio-nombre">Keratina capilar</div>
+          <div class="servicio-desc">Tratamiento alisador</div>
+        </div>
+        <div class="servicio-precio">$12.000</div>
+        <a href="https://wa.me/5492235000000?text=Hola!%20Quiero%20turno%20para%20Keratina%20capilar" class="servicio-wpp" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.625a.75.75 0 0 0 .92.921l5.84-1.498A11.955 11.955 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.943 0-3.772-.538-5.338-1.475l-.383-.227-3.967 1.018 1.05-3.863-.247-.396A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Turno
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="galeria">
+    <p class="section-label">Galería</p>
+    <h2 class="section-title">Nuestro trabajo</h2>
+    <div class="galeria-grid">
+      <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800&q=80" alt="Trabajo Baron Barbería" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=400&q=80" alt="Corte de cabello" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=400&q=80" alt="Arreglo de barba" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1580618432069-d47cbb2f1e61?w=400&q=80" alt="Degradé" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=400&q=80" alt="Barbería interior" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- INFO -->
+  <section class="info">
+    <p class="section-label">Encontranos</p>
+    <h2 class="section-title">Dónde estamos</h2>
+    <div class="info-grid">
+
+      <div class="info-card">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="info-label">Dirección</div>
+          <div class="info-val">
+            Av. Principal 1234<br />Santa Clara del Mar<br />
+            <a href="https://maps.google.com" target="_blank">Ver en Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="info-label">Horarios</div>
+          <div class="info-val">
+            Lunes a Viernes: 9 a 20hs<br />
+            Sábados: 9 a 18hs<br />
+            Domingos: cerrado
+          </div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.625a.75.75 0 0 0 .92.921l5.84-1.498A11.955 11.955 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.943 0-3.772-.538-5.338-1.475l-.383-.227-3.967 1.018 1.05-3.863-.247-.396A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        </div>
+        <div>
+          <div class="info-label">WhatsApp</div>
+          <div class="info-val">
+            <a href="https://wa.me/5492235000000" target="_blank">+54 9 223 500-0000</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <div>
+          <div class="info-label">Instagram</div>
+          <div class="info-val">
+            <a href="https://instagram.com" target="_blank">@baronbarberia</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Baron</div>
+    <p class="footer-sub">Barbería · Santa Clara del Mar</p>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE -->
+  <a href="https://wa.me/5492235000000?text=Hola!%20Quiero%20sacar%20un%20turno%20en%20Baron%20Barber%C3%ADa" class="wpp-float" target="_blank">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.625a.75.75 0 0 0 .92.921l5.84-1.498A11.955 11.955 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.943 0-3.772-.538-5.338-1.475l-.383-.227-3.967 1.018 1.05-3.863-.247-.396A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    Reservar turno
+  </a>
+
+</body>
+</html>
