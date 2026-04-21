@@ -541,18 +541,18 @@
 <script>
   // ── PRODUCTOS ──────────────────────────────────────────────
   const productos = [
-    { id: 1,  nombre: "Scandal",           marca: "JPG",        precios: { "3ML": 9000,  "5ML": 14000, "10ML": 23200 }, img: "" },
-    { id: 2,  nombre: "Scandal (mujer)",   marca: "JPG",        precios: { "3ML": 9000,  "5ML": 14000, "10ML": 23200 }, img: "" },
-    { id: 3,  nombre: "Le Beau",           marca: "JPG",        precios: { "3ML": 8000,  "5ML": 12200, "10ML": 22500 }, img: "" },
-    { id: 4,  nombre: "Born in Roma Extradose", marca: "Valentino", precios: { "3ML": 15000, "5ML": 20000, "10ML": 32500 }, img: "" },
-    { id: 5,  nombre: "Erba Pura",         marca: "Xerjoff",    precios: { "3ML": 15700, "5ML": 22500, "10ML": 32000 }, img: "" },
-    { id: 6,  nombre: "Devotion",          marca: "D&G",        precios: { "3ML": 9000,  "5ML": 13700, "10ML": 23200 }, img: "" },
-    { id: 7,  nombre: "Flower",            marca: "Kenzo",      precios: { "3ML": 8000,  "5ML": 12000, "10ML": 20000 }, img: "" },
-    { id: 8,  nombre: "Good Girl",         marca: "CH",         precios: { "3ML": 10500, "5ML": 15000, "10ML": 27000 }, img: "" },
-    { id: 9,  nombre: "Wanted",            marca: "Azzaro",     precios: { "3ML": 8000,  "5ML": 11000, "10ML": 20000 }, img: "" },
-    { id: 10, nombre: "L'Interdit",        marca: "Givenchy",   precios: { "3ML": 11000, "5ML": 16000, "10ML": 28000 }, img: "" },
-    { id: 11, nombre: "Le Male Elixir",    marca: "JPG",        precios: { "3ML": 10500, "5ML": 15000, "10ML": 27000 }, img: "" },
-    { id: 12, nombre: "Stronger With You Intensely", marca: "Armani", precios: { "3ML": 14000, "5ML": 16000, "10ML": 28000 }, img: "" },
+    { id: 1,  nombre: "Scandal",           marca: "JPG",        precios: { "3ML": 9000,  "5ML": 14000, "10ML": 23200 }, img: "PERFUMES/ck-eternity-edt.jpg" },
+    { id: 2,  nombre: "Scandal (mujer)",   marca: "JPG",        precios: { "3ML": 9000,  "5ML": 14000, "10ML": 23200 }, img: "PERFUMES/ck-eternity-flame.jpg" },
+    { id: 3,  nombre: "Le Beau",           marca: "JPG",        precios: { "3ML": 8000,  "5ML": 12200, "10ML": 22500 }, img: "PERFUMES/ck-euphoria.jpg - CK Euphoria.jpg" },
+    { id: 4,  nombre: "Born in Roma Extradose", marca: "Valentino", precios: { "3ML": 15000, "5ML": 20000, "10ML": 32500 }, img: "PERFUMES/cuba-las-vegas.jpg -.jpg" },
+    { id: 5,  nombre: "Erba Pura",         marca: "Xerjoff",    precios: { "3ML": 15700, "5ML": 22500, "10ML": 32000 }, img: "PERFUMES/cuba-royal.jpg -.jpg" },
+    { id: 6,  nombre: "Devotion",          marca: "D&G",        precios: { "3ML": 9000,  "5ML": 13700, "10ML": 23200 }, img: "PERFUMES/cuba-winner.jpg" },
+    { id: 7,  nombre: "Flower",            marca: "Kenzo",      precios: { "3ML": 8000,  "5ML": 12000, "10ML": 20000 }, img: "PERFUMES/danielle-boy.jpg" },
+    { id: 8,  nombre: "Good Girl",         marca: "CH",         precios: { "3ML": 10500, "5ML": 15000, "10ML": 27000 }, img: "PERFUMES/davidoff-cool-water-parfum.jpg" },
+    { id: 9,  nombre: "Wanted",            marca: "Azzaro",     precios: { "3ML": 8000,  "5ML": 11000, "10ML": 20000 }, img: "PERFUMES/davidoff-cool-water.jpg -.jpg" },
+    { id: 10, nombre: "L'Interdit",        marca: "Givenchy",   precios: { "3ML": 11000, "5ML": 16000, "10ML": 28000 }, img: "PERFUMES/fd696a7ce53d39993c19bbcd273f928e.jpg" },
+    { id: 11, nombre: "Le Male Elixir",    marca: "JPG",        precios: { "3ML": 10500, "5ML": 15000, "10ML": 27000 }, img: "PERFUMES/ck-eternity-edt.jpg" },
+    { id: 12, nombre: "Stronger With You Intensely", marca: "Armani", precios: { "3ML": 14000, "5ML": 16000, "10ML": 28000 }, img: "PERFUMES/ck-eternity-flame.jpg" },
   ];
 
   // WPP de Maki — cambiar por el número real
@@ -583,7 +583,9 @@
       const precio = p.precios[seleccion[p.id]];
 
       card.innerHTML = `
-        <div class="product-img-placeholder">🌸</div>
+        <div class="product-img-placeholder" style="padding:0;overflow:hidden;">
+          <img src="${p.img}" alt="${p.nombre}" style="width:100%;height:180px;object-fit:cover;display:block;" />
+        </div>
         <div class="product-info">
           <div class="product-name">${p.nombre}</div>
           <div class="product-brand">${p.marca}</div>
