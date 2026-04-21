@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Por qué tu negocio necesita presencia digital — Atlantic Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --negro: #111010;
+      --dorado: #c9a84c;
+      --gris-claro: #f7f6f3;
+      --blanco: #fff;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--blanco);
+      color: var(--negro);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* PORTADA */
+    .portada {
+      background: var(--negro);
+      color: var(--blanco);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 40px;
+    }
+
+    .portada .subtag {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--dorado);
+      margin-bottom: 32px;
+    }
+
+    .portada h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 900;
+      line-height: 1.15;
+      max-width: 780px;
+      margin-bottom: 24px;
+    }
+
+    .portada h1 span { color: var(--dorado); }
+
+    .portada p {
+      font-size: 17px;
+      color: #aaa;
+      max-width: 560px;
+      margin-bottom: 48px;
+    }
+
+    .portada .firma {
+      border-top: 1px solid #333;
+      padding-top: 32px;
+      font-size: 13px;
+      color: #666;
+    }
+
+    .portada .firma strong { color: var(--dorado); }
+
+    /* SECCIONES */
+    .seccion { padding: 80px 60px; }
+    .seccion .inner { max-width: 900px; margin: 0 auto; }
+    .seccion.dark { background: var(--negro); color: var(--blanco); }
+    .seccion.light { background: var(--gris-claro); }
+
+    .tag {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--dorado);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; }
+    p { margin-bottom: 16px; color: #555; }
+    .dark p { color: #bbb; }
+
+    /* STATS */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .stat-card {
+      background: #1a1a1a;
+      border-top: 3px solid var(--dorado);
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    .stat-card .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      font-weight: 900;
+      color: var(--dorado);
+      line-height: 1;
+      display: block;
+    }
+
+    .stat-card .desc { font-size: 13px; color: #888; margin-top: 8px; line-height: 1.5; }
+
+    /* PROBLEMAS */
+    .problema-list { display: flex; flex-direction: column; gap: 16px; margin-top: 40px; }
+
+    .problema-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 24px;
+      border: 1px solid #e8e4dc;
+    }
+
+    .problema-icon { font-size: 22px; flex-shrink: 0; }
+    .problema-item h3 { margin-bottom: 4px; font-size: 15px; }
+    .problema-item p { margin: 0; font-size: 13px; color: #666; }
+
+    /* METODOLOGÍA */
+    .metodologia-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 48px;
+    }
+
+    .step { background: #1a1a1a; padding: 40px 28px; text-align: center; }
+
+    .step-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      color: #2a2a2a;
+      font-weight: 900;
+      line-height: 1;
+      display: block;
+    }
+
+    .step h3 { color: var(--dorado); margin: 10px 0 6px; font-size: 15px; }
+    .step p { font-size: 13px; color: #888; margin: 0; }
+
+    /* ADN */
+    .adn-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 40px; }
+
+    .adn-card {
+      padding: 24px;
+      border: 1px solid #e8e4dc;
+      border-left: 4px solid var(--dorado);
+    }
+
+    .adn-card h3 { font-size: 14px; margin-bottom: 6px; }
+    .adn-card p { font-size: 13px; color: #666; margin: 0; }
+
+    /* ECOSISTEMA */
+    .ecosistema-list { margin-top: 40px; }
+
+    .eco-row {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    .eco-label {
+      background: #1a1a1a;
+      padding: 24px 20px;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--dorado);
+    }
+
+    .eco-content { padding: 24px 28px; background: #111; }
+    .eco-content ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+
+    .eco-content li {
+      font-size: 13px;
+      color: #aaa;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .eco-content li::before { content: '—'; position: absolute; left: 0; color: var(--dorado); }
+
+    /* TABLA */
+    .comp-table { margin-top: 40px; border: 1px solid #e8e4dc; width: 100%; }
+
+    .comp-header {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      background: var(--negro);
+      padding: 16px 24px;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #555;
+      gap: 12px;
+    }
+
+    .comp-row {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      padding: 16px 24px;
+      border-bottom: 1px solid #f0ece4;
+      font-size: 14px;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .comp-row:last-child { border-bottom: none; }
+
+    .badge { display: inline-block; padding: 3px 10px; font-size: 11px; font-weight: 600; }
+    .badge.si { background: #d4edda; color: #155724; }
+    .badge.no { background: #f8d7da; color: #721c24; }
+    .badge.parcial { background: #fff3cd; color: #856404; }
+
+    /* CTA */
+    .cta-section { background: var(--dorado); text-align: center; padding: 80px 60px; }
+    .cta-section h2 { color: var(--negro); margin-bottom: 16px; }
+    .cta-section p { color: #555; font-size: 16px; margin-bottom: 40px; }
+
+    .cta-box {
+      background: var(--negro);
+      color: var(--blanco);
+      display: inline-block;
+      padding: 18px 44px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .cta-wpp { font-size: 20px; font-weight: 600; color: var(--negro); }
+
+    /* PRINT */
+    @media print {
+      .portada { min-height: 100vh; page-break-after: always; }
+      .seccion { page-break-inside: avoid; }
+      .stats-grid, .adn-grid, .metodologia-steps { page-break-inside: avoid; }
+      body { font-size: 13px; }
+      h2 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PORTADA -->
+  <div class="portada">
+    <span class="subtag">Atlantic Web — Presentación para negocios</span>
+    <h1>Tu negocio pierde clientes<br>cada día que <span>no está en internet</span></h1>
+    <p>Todo lo que tu competencia ya está haciendo — y lo que vos podés hacer mejor.</p>
+    <div class="firma">Preparado por <strong>Atlantic Web</strong> · Santa Clara del Mar · 2026</div>
+  </div>
+
+  <!-- EL MERCADO HOY -->
+  <div class="seccion dark">
+    <div class="inner">
+      <span class="tag">El mercado hoy</span>
+      <h2 style="color: white;">Antes de que decidas buscarlos,<br>ya te están buscando a vos</h2>
+      <p>Cuando alguien necesita algo en tu rubro, lo primero que hace es buscar en internet. Si no aparecés, la venta se la lleva otro.</p>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="num">87%</span>
+          <span class="desc">de los consumidores buscan online antes de comprar en un local físico</span>
+        </div>
+        <div class="stat-card">
+          <span class="num">5 seg</span>
+          <span class="desc">es todo lo que tiene un negocio para captar la atención antes de que se vayan</span>
+        </div>
+        <div class="stat-card">
+          <span class="num">3×</span>
+          <span class="desc">más conversiones logran los negocios con presencia digital bien optimizada</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOS PROBLEMAS -->
+  <div class="seccion">
+    <div class="inner">
+      <span class="tag">El problema real</span>
+      <h2>Lo que le pasa a la mayoría de los negocios sin presencia digital</h2>
+      <p>No es falta de calidad en el producto. Es invisibilidad. Y la invisibilidad tiene costos concretos.</p>
+
+      <div class="problema-list">
+        <div class="problema-item">
+          <div class="problema-icon">📵</div>
+          <div>
+            <h3>Sin punto de contacto digital</h3>
+            <p>Un cliente interesado no tiene dónde ir. No hay web, no hay Instagram optimizado, no hay WhatsApp Business. La consulta muere antes de nacer.</p>
+          </div>
+        </div>
+        <div class="problema-item">
+          <div class="problema-icon">🔇</div>
+          <div>
+            <h3>La competencia sí aparece</h3>
+            <p>Aunque tu producto sea mejor, quien tiene presencia digital se lleva la venta. El que aparece primero gana. No el que es mejor.</p>
+          </div>
+        </div>
+        <div class="problema-item">
+          <div class="problema-icon">🕐</div>
+          <div>
+            <h3>Dependencia del boca a boca</h3>
+            <p>El boca a boca funciona pero es lento y no escala. Cada nuevo cliente depende de que otro lo recomiende. Internet rompe ese límite.</p>
+          </div>
+        </div>
+        <div class="problema-item">
+          <div class="problema-icon">📉</div>
+          <div>
+            <h3>Sin datos, sin aprendizaje</h3>
+            <p>Sin presencia digital no sabés cuánta gente te buscó, qué les interesó, dónde se fueron. No podés mejorar lo que no medís.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- METODOLOGÍA -->
+  <div class="seccion dark">
+    <div class="inner">
+      <span class="tag">Cómo trabajamos</span>
+      <h2 style="color: white;">Metodología Ver → Copiar → Mejorar</h2>
+      <p>No arrancamos desde cero ni inventamos estrategias en el aire. Miramos qué funciona en tu mercado y lo aplicamos con tu diferencial.</p>
+
+      <div class="metodologia-steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <h3>Ver</h3>
+          <p>Analizamos tu competencia real — anuncios activos ahora en Meta Ads, Instagram, web. Datos concretos, no suposiciones.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <h3>Copiar</h3>
+          <p>Tomamos los formatos, copies y ángulos que ya demostraron funcionar en tu rubro. Partimos de evidencia.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <h3>Mejorar</h3>
+          <p>Lo adaptamos con tu voz de marca, tu diferencial y tu cliente ideal. Lo que la competencia hace bien, vos lo hacés mejor.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADN EMPRESARIAL -->
+  <div class="seccion">
+    <div class="inner">
+      <span class="tag">Nuestro diferencial</span>
+      <h2>Antes de crear cualquier cosa,<br>entendemos tu negocio</h2>
+      <p>La mayoría de las agencias arrancan a diseñar sin conocer nada del cliente. Nosotros hacemos lo opuesto. Estudiamos tu ADN empresarial completo — porque campañas genéricas dan resultados genéricos.</p>
+
+      <div class="adn-grid">
+        <div class="adn-card">
+          <h3>Historia e identidad</h3>
+          <p>De dónde viene tu negocio, qué lo inspiró, cuánto tiempo tiene, cuál es su misión real. Eso define el tono de todo lo que comunicamos.</p>
+        </div>
+        <div class="adn-card">
+          <h3>Voz de la marca</h3>
+          <p>Cómo habla tu negocio, qué emociones transmite, si es formal o cercano. Todo lo que creamos habla con la misma voz que vos.</p>
+        </div>
+        <div class="adn-card">
+          <h3>Tu diferencial real</h3>
+          <p>No "precio y calidad" — eso lo dice todo el mundo. Encontramos lo que realmente te hace diferente y lo ponemos en primer plano.</p>
+        </div>
+        <div class="adn-card">
+          <h3>Tu cliente ideal</h3>
+          <p>Edad, zona, dolores, objeciones, deseos. Mientras más específico es el mensaje, más convierte. Hablamos directo a quien te tiene que comprar.</p>
+        </div>
+        <div class="adn-card">
+          <h3>Prueba social</h3>
+          <p>Testimonios, casos reales, resultados. Construimos credibilidad desde el primer contacto para que el cliente llegue con confianza.</p>
+        </div>
+        <div class="adn-card">
+          <h3>Datos históricos</h3>
+          <p>Si ya hiciste algo antes — publicidad, redes, WhatsApp — lo analizamos. Partimos de lo que funcionó y descartamos lo que no.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ECOSISTEMA DIGITAL -->
+  <div class="seccion dark">
+    <div class="inner">
+      <span class="tag">El sistema completo</span>
+      <h2 style="color: white;">No es solo una web.<br>Es un ecosistema que trabaja solo.</h2>
+      <p>Cada punto de contacto con tu cliente potencial tiene que estar optimizado. Un solo eslabón roto corta toda la cadena.</p>
+
+      <div class="ecosistema-list">
+        <div class="eco-row">
+          <div class="eco-label">Página web</div>
+          <div class="eco-content">
+            <ul>
+              <li>Carga en menos de 3 segundos — cada segundo extra baja 7% las conversiones</li>
+              <li>En 5 segundos se entiende qué vendés, para quién y por qué sos diferente</li>
+              <li>Diseño mobile-first — el 80% del tráfico viene del celular</li>
+              <li>Botón de contacto visible en toda la página</li>
+            </ul>
+          </div>
+        </div>
+        <div class="eco-row">
+          <div class="eco-label">Instagram</div>
+          <div class="eco-content">
+            <ul>
+              <li>Bio que en 3 líneas convierte — qué ofrecés, diferencial y CTA</li>
+              <li>Historias destacadas: testimonios, cómo comprar, preguntas frecuentes</li>
+              <li>Regla 80/20 — 80% valor y entretenimiento, 20% venta directa</li>
+              <li>Personas detrás del producto: Human to Human vende más que producto solo</li>
+            </ul>
+          </div>
+        </div>
+        <div class="eco-row">
+          <div class="eco-label">WhatsApp Business</div>
+          <div class="eco-content">
+            <ul>
+              <li>Perfil completo con categoría, horarios y descripción del negocio</li>
+              <li>Catálogo con fotos, precios y stock actualizado</li>
+              <li>Respuesta automática para no perder consultas fuera de horario</li>
+              <li>El cliente que no recibe respuesta en 5 minutos se va a la competencia</li>
+            </ul>
+          </div>
+        </div>
+        <div class="eco-row" style="border-bottom: none;">
+          <div class="eco-label">Publicidad digital</div>
+          <div class="eco-content">
+            <ul>
+              <li>Pixel instalado para trackear cada visita, interés y compra</li>
+              <li>Públicos personalizados — mostramos anuncios a quien ya te conoce</li>
+              <li>Públicos similares — Facebook busca perfiles parecidos a tus clientes actuales</li>
+              <li>Análisis de competencia en Meta Ads — sabemos qué funciona en tu rubro</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABLA COMPARATIVA -->
+  <div class="seccion light">
+    <div class="inner">
+      <span class="tag">Comparativa</span>
+      <h2>Lo que obtenés con Atlantic Web<br>vs hacer nada (o hacerlo solo)</h2>
+
+      <div class="comp-table">
+        <div class="comp-header">
+          <span>Aspecto</span>
+          <span>Sin presencia</span>
+          <span>Básico</span>
+          <span>Atlantic Web</span>
+        </div>
+        <div class="comp-row">
+          <span>Página web profesional</span>
+          <span><span class="badge no">No</span></span>
+          <span><span class="badge parcial">Parcial</span></span>
+          <span><span class="badge si">Sí</span></span>
+        </div>
+        <div class="comp-row">
+          <span>Pedidos por WhatsApp</span>
+          <span><span class="badge no">Manual</span></span>
+          <span><span class="badge parcial">Básico</span></span>
+          <span><span class="badge si">Automatizado</span></span>
+        </div>
+        <div class="comp-row">
+          <span>Análisis de competencia</span>
+          <span><span class="badge no">No</span></span>
+          <span><span class="badge no">No</span></span>
+          <span><span class="badge si">Incluido</span></span>
+        </div>
+        <div class="comp-row">
+          <span>Estrategia basada en datos</span>
+          <span><span class="badge no">No</span></span>
+          <span><span class="badge parcial">A veces</span></span>
+          <span><span class="badge si">Siempre</span></span>
+        </div>
+        <div class="comp-row">
+          <span>ADN empresarial documentado</span>
+          <span><span class="badge no">No</span></span>
+          <span><span class="badge no">No</span></span>
+          <span><span class="badge si">Sí</span></span>
+        </div>
+        <div class="comp-row">
+          <span>Soporte y actualizaciones</span>
+          <span><span class="badge no">No</span></span>
+          <span><span class="badge parcial">Limitado</span></span>
+          <span><span class="badge si">Incluido</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA FINAL -->
+  <div class="cta-section">
+    <h2>¿Querés ver cómo quedaría tu negocio?</h2>
+    <p>Te mostramos demos reales de negocios como el tuyo — pizzería, barbería, ropa.<br>Sin costo, sin compromiso.</p>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
+      <div class="cta-box">Ver demos → atlanticweb.netlify.app</div>
+      <div class="cta-wpp">WhatsApp: +54 9 11 5743-2540</div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,569 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="UTF-8">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<title>ADN de tu negocio — Atlantic Web</title>
+<style>
+  body {
+    font-family: Calibri, sans-serif;
+    font-size: 11pt;
+    color: #111;
+    margin: 2cm 2.5cm;
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-family: Georgia, serif;
+    font-size: 26pt;
+    font-weight: bold;
+    color: #111;
+    text-align: center;
+    margin-bottom: 6pt;
+    border-bottom: 3pt solid #c9a84c;
+    padding-bottom: 10pt;
+  }
+
+  h2 {
+    font-family: Georgia, serif;
+    font-size: 14pt;
+    font-weight: bold;
+    color: #c9a84c;
+    margin-top: 24pt;
+    margin-bottom: 4pt;
+  }
+
+  h3 {
+    font-family: Calibri, sans-serif;
+    font-size: 11pt;
+    font-weight: bold;
+    color: #111;
+    margin-top: 14pt;
+    margin-bottom: 2pt;
+  }
+
+  .portada-subtitulo {
+    text-align: center;
+    font-size: 10pt;
+    color: #888;
+    letter-spacing: 2pt;
+    text-transform: uppercase;
+    margin-bottom: 20pt;
+  }
+
+  .portada-descripcion {
+    text-align: center;
+    font-size: 11pt;
+    color: #555;
+    margin-bottom: 20pt;
+    max-width: 500pt;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .intro-box {
+    background: #f7f6f3;
+    border-left: 4pt solid #c9a84c;
+    padding: 10pt 14pt;
+    font-size: 10pt;
+    color: #555;
+    margin: 12pt 0 24pt;
+  }
+
+  .seccion-header {
+    background: #111;
+    color: #c9a84c;
+    font-family: Calibri, sans-serif;
+    font-size: 9pt;
+    letter-spacing: 2pt;
+    text-transform: uppercase;
+    padding: 6pt 12pt;
+    margin-top: 30pt;
+    margin-bottom: 0;
+  }
+
+  .hint {
+    font-size: 9pt;
+    color: #999;
+    font-style: italic;
+    margin-bottom: 4pt;
+    display: block;
+  }
+
+  .campo {
+    margin-bottom: 18pt;
+  }
+
+  .linea {
+    border: none;
+    border-bottom: 1pt solid #ccc;
+    width: 100%;
+    height: 20pt;
+    display: block;
+    margin-bottom: 2pt;
+  }
+
+  .lineas-triple {
+    border: none;
+    border-bottom: 1pt solid #ccc;
+    width: 100%;
+    height: 20pt;
+    display: block;
+    margin-bottom: 2pt;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6pt;
+  }
+
+  td {
+    padding: 6pt 10pt;
+    border: 1pt solid #ddd;
+    font-size: 10pt;
+    vertical-align: top;
+  }
+
+  td.label-col {
+    width: 30%;
+    background: #f7f6f3;
+    font-weight: bold;
+    font-size: 10pt;
+  }
+
+  .check-tabla td {
+    padding: 5pt 8pt;
+    border: 1pt solid #e0dbd0;
+    font-size: 10pt;
+  }
+
+  .numero-seccion {
+    font-family: Georgia, serif;
+    font-size: 32pt;
+    color: #e0dbd0;
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  .radio-opcion {
+    display: inline;
+    margin-right: 16pt;
+    font-size: 10pt;
+  }
+
+  .firma-tabla td {
+    padding: 40pt 10pt 6pt;
+    border: none;
+    border-top: 1pt solid #999;
+    text-align: center;
+    font-size: 9pt;
+    color: #888;
+  }
+
+  .footer-doc {
+    text-align: center;
+    font-size: 9pt;
+    color: #aaa;
+    margin-top: 30pt;
+    border-top: 1pt solid #eee;
+    padding-top: 10pt;
+  }
+
+  p { margin-bottom: 6pt; }
+</style>
+</head>
+<body>
+
+<!-- PORTADA -->
+<p class="portada-subtitulo">Atlantic Web · Formulario de onboarding</p>
+<h1>El ADN de tu negocio</h1>
+<p class="portada-descripcion">Cuanto más sabemos sobre vos, mejor funciona todo lo que creamos.<br>
+Completá este formulario antes de nuestra primera reunión.</p>
+
+<div class="intro-box">
+<strong>¿Para qué sirve esto?</strong><br>
+Las agencias que no preguntan hacen trabajo genérico. Nosotros estudiamos tu negocio antes de empezar: tu historia, tu cliente, tu competencia, tu voz. El resultado son páginas y campañas que realmente convierten — porque hablan exactamente a las personas que te tienen que comprar.
+</div>
+
+<br><br>
+
+<!-- ===== SECCIÓN 1 ===== -->
+<p class="seccion-header">SECCIÓN 01 — TU NEGOCIO: LA BASE</p>
+
+<h2>01 · Historia e identidad</h2>
+<p style="color:#888; font-size:10pt;">Queremos entender de dónde viene tu negocio y hacia dónde va.</p>
+
+<div class="campo">
+<h3>¿Cuál es el nombre de tu negocio?</h3>
+<div class="linea"></div>
+</div>
+
+<div class="campo">
+<h3>¿Qué productos o servicios ofrecés?</h3>
+<span class="hint">Sé específico. No "comida" sino "pizzas artesanales con masa madre".</span>
+<div class="linea"></div>
+<div class="linea"></div>
+<div class="linea"></div>
+</div>
+
+<div class="campo">
+<h3>¿Cuál es la historia detrás de tu marca?</h3>
+<span class="hint">¿Cómo empezaste? ¿Qué te motivó? ¿Hay algo especial desde el origen?</span>
+<div class="linea"></div>
+<div class="linea"></div>
+<div class="linea"></div>
+<div class="linea"></div>
+</div>
+
+<table>
+<tr>
+  <td class="label-col">¿Cuántos años lleva el negocio?</td>
+  <td></td>
+  <td class="label-col">¿Dónde operás? (ciudad / zona)</td>
+  <td></td>
+</tr>
+</table>
+<br>
+
+<div class="campo">
+<h3>¿En qué necesidad del cliente fue inspirado tu negocio?</h3>
+<div class="linea"></div>
+<div class="linea"></div>
+</div>
+
+<div class="campo">
+<h3>¿Cuál es la misión de tu marca? (objetivo principal hoy)</h3>
+<div class="linea"></div>
+<div class="linea"></div>
+</div>
+
+<div class="campo">
+<h3>¿Cuál es la visión? (a dónde querés llegar en 3-5 años)</h3>
+<div class="linea"></div>
+<div class="linea"></div>
+</div>
+
+<!-- ===== SECCIÓN 2 ===== -->
+<p class="seccion-header">SECCIÓN 02 — LA VOZ DE TU MARCA</p>
+
+<h2>02 · Cómo habla tu negocio</h2>
+<p style="color:#888; font-size:10pt;">Lo que publiquemos tiene que sonar exactamente como vos — no como cualquier otro negocio.</p>
+
+<div class="intro-box">
+<strong>¿Por qué esto importa?</strong> Lo que mostramos en redes, web y publicidad tiene que hablar con la misma voz que usás con tus clientes. Si sos cercano y divertido, los textos tienen que serlo. Si sos profesional y serio, también.
+</div>
+
+<div class="campo">
+<h3>3 palabras que mejor describen tu marca</h3>
+<table>
+<tr>
+  <td>1. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  <td>2. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  <td>3. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</div>
+
+<div class="campo">
+<h3>¿Tenés un eslogan o frase que identifique tu marca?</h3>
+<div class="linea"></div>
+</div>
+
+<div class="campo">
+<h3>¿Cómo querés que se sientan tus clientes después de comprarte?</h3>
+<div class="linea"></div>
+<div class="linea"></div>
+</div>
+
+<div class="campo">
+<h3>Tono de comunicación — marcá el que más se acerca</h3>
+<table class="check-tabla">
+<tr>
+  <td>☐ Formal y profesional</td>
+  <td>☐ Cercano y amigable</td>
+</tr>
+<tr>
+  <td>☐ Divertido y descontracturado</td>
+  <td>☐ Inspiracional y aspiracional</td>
+</tr>
+<tr>
+  <td>☐ Técnico y detallado</td>
+  <td>☐ Cálido y emocional</td>
+</tr>
+</table>
+</div>
+
+<div class="campo">
+<h3>¿Usás emojis en tu comunicación?</h3>
+<table class="check-tabla">
+<tr>
+  <td>☐ Sí, bastante</td>
+  <td>☐ Solo algunos</td>
+  <td>☐ Prefiero no usar</td>
+</tr>
+</table>
+</div>
+
+<div class="campo">
+<h3>¿Qué valores transmite tu marca?</h3>
+<span class="hint">Ej: calidad artesanal, inclusión, familia, confianza, sustentabilidad...</span>
+<div class="linea"></div>
+<div class="linea"></div>
+</div>
+
+<!-- ===== SECCIÓN 3 ===== -->
+<p class="seccion-header">SECCIÓN 03 — TU DIFERENCIAL REAL</p>
+
+<h2>03 · Por qué elegirte a vos</h2>
+<p style="color:#888; font-size:10pt;">No "precio, calidad y atención" — eso lo dice todo el mundo.</p>
+
+<div class="intro-box">
+<strong>Importante:</strong> No pongas "buena atención" ni "calidad" como diferencial. Esos los tiene cualquiera. Pensá en algo específico que sólo vos hacés, ofrecés o tenés.
+</div>
+
+<div class="campo">
+<h3>¿Por qué deberían elegirte frente a la competencia?</h3>
+<div class="linea"></div>
+<div class="linea"></div>
+<div class="linea"></div>
+<div class="linea"></div>
+</div>
+
+<div class="campo">
+<h3>¿Ofrecés algún tipo de garantía?</h3>
+<div class="linea"></div>
+<div class="linea"></div>
+</div>
+
+<div class="campo">
+<h3>¿Tenés formas de pago especiales?</h3>
+<table class="check-tabla">
+<tr>
+  <td>☐ Efectivo</td>
+  <td>☐ Transferencia / Mercado Pago</td>
+  <td>☐ Tarjeta débito</td>
+</tr>
+<tr>
+  <td>☐ Tarjeta crédito</td>
+  <td>☐ Cuotas sin interés</td>
+  <td>☐ Otro: ____________</td>
+</tr>
+</table>
+</div>
+
+<div class="campo">
+<h3>¿Tenés testimonios o prueba social?</h3>
+<table class="check-tabla">
+<tr>
+  <td>☐ Sí, varios</td>
+  <td>☐ Tengo algunos</td>
+  <td>☐ No tengo todavía</td>
+</tr>
+</table>
+<br>
+<span class="hint">Si tenés, ¿dónde están? (capturas de WPP, reseñas de Google, comentarios de IG)</span>
+<div class="linea"></div>
+</div>
+
+<div class="campo">
+<h3>¿Tenés productos exclusivos, ediciones limitadas u ofertas especiales?</h3>
+<div class="linea"></div>
+<div class="linea"></div>
+</div>
+
+<!-- ===== SECCIÓN 4 ===== -->
+<p class="seccion-header">SECCIÓN 04 — TU CLIENTE IDEAL</p>
+
+<h2>04 · A quién le hablamos</h2>
+<p style="color:#888; font-size:10pt;">Un mensaje que habla con todos, no le habla a nadie.</p>
+
+<div class="campo">
+<table>
+<tr>
+  <td class="label-col">Edad promedio del cliente ideal</td>
+  <td></td>
+  <td class="label-col">Sexo predominante</td>
+  <td>☐ Mujer &nbsp; ☐ Hombre &nbsp; ☐ Ambos</td>
+</tr>
+<tr>
+  <td class="label-col">¿Dónde vive?</td>
+  <td></td>
+  <td class="label-col">Nivel socioeconómico</td>
+  <td>☐ Bajo &nbsp; ☐ Medio &nbsp; ☐ Alto</td>
+</tr>
+</table>
+</div>
+
+<div class="campo">
+<h3>¿Cuáles son los principales dolores o problemas de tu cliente?</h3>
+<span class="hint">¿Qué les preocupa, frustra o complica en el área donde vos los ayudás?</span>
+<div class="linea"></div>
+<div class="linea"></div>
+<div class="linea"></div>
+</div>
+
+<div class="campo">
+<h3>¿Qué deseos tiene a nivel emocional? ¿Cómo quiere sentirse?</h3>
+<div class="linea"></div>
+<div class="linea"></div>
+</div>
+
+<div class="campo">
+<h3>¿Qué objeciones tiene antes de comprarte? ¿Cuáles son sus "peros" o miedos?</h3>
+<span class="hint">Ej: "Es caro", "No sé si me va a quedar bien", "¿Cómo pago?"</span>
+<div class="linea"></div>
+<div class="linea"></div>
+<div class="linea"></div>
+</div>
+
+<div class="campo">
+<h3>¿Qué otras marcas o productos consume tu cliente? (fuera de tu rubro)</h3>
+<span class="hint">Esto nos ayuda a saber qué estilo de vida tiene y dónde encontrarlo.</span>
+<div class="linea"></div>
+<div class="linea"></div>
+</div>
+
+<!-- ===== SECCIÓN 5 ===== -->
+<p class="seccion-header">SECCIÓN 05 — TU COMPETENCIA</p>
+
+<h2>05 · El mercado en el que competís</h2>
+<p style="color:#888; font-size:10pt;">Para ganarle a la competencia hay que conocerla primero.</p>
+
+<div class="intro-box">
+<strong>Competidores:</strong> negocios similares al tuyo, mismo precio y mercado.<br>
+<strong>Aspiraciones:</strong> los que querés parecerte, más grandes o más reconocidos.
+</div>
+
+<div class="campo">
+<h3>5 competidores directos</h3>
+<span class="hint">Nombre + red social o web si la tienen.</span>
+<table>
+<tr><td style="width:20pt; color:#c9a84c; font-weight:bold;">1.</td><td></td></tr>
+<tr><td style="width:20pt; color:#c9a84c; font-weight:bold;">2.</td><td></td></tr>
+<tr><td style="width:20pt; color:#c9a84c; font-weight:bold;">3.</td><td></td></tr>
+<tr><td style="width:20pt; color:#c9a84c; font-weight:bold;">4.</td><td></td></tr>
+<tr><td style="width:20pt; color:#c9a84c; font-weight:bold;">5.</td><td></td></tr>
+</table>
+</div>
+
+<div class="campo">
+<h3>5 referencias o aspiraciones</h3>
+<span class="hint">Pueden ser de otra ciudad o de otro país.</span>
+<table>
+<tr><td style="width:20pt; color:#c9a84c; font-weight:bold;">1.</td><td></td></tr>
+<tr><td style="width:20pt; color:#c9a84c; font-weight:bold;">2.</td><td></td></tr>
+<tr><td style="width:20pt; color:#c9a84c; font-weight:bold;">3.</td><td></td></tr>
+<tr><td style="width:20pt; color:#c9a84c; font-weight:bold;">4.</td><td></td></tr>
+<tr><td style="width:20pt; color:#c9a84c; font-weight:bold;">5.</td><td></td></tr>
+</table>
+</div>
+
+<div class="campo">
+<h3>¿Qué hacen mejor tus competidores que vos? (sé honesto)</h3>
+<div class="linea"></div>
+<div class="linea"></div>
+</div>
+
+<div class="campo">
+<h3>¿Qué hacés mejor vos que ellos?</h3>
+<div class="linea"></div>
+<div class="linea"></div>
+</div>
+
+<!-- ===== SECCIÓN 6 ===== -->
+<p class="seccion-header">SECCIÓN 06 — TU HISTORIAL DIGITAL</p>
+
+<h2>06 · Lo que ya hiciste — y lo que aprendiste</h2>
+<p style="color:#888; font-size:10pt;">Partimos siempre de lo que ya funcionó.</p>
+
+<div class="campo">
+<h3>¿Qué canales digitales usás actualmente?</h3>
+<table class="check-tabla">
+<tr>
+  <td>☐ Instagram</td>
+  <td>☐ Facebook</td>
+  <td>☐ WhatsApp Business</td>
+</tr>
+<tr>
+  <td>☐ TikTok</td>
+  <td>☐ Página web propia</td>
+  <td>☐ Google Maps / Negocio</td>
+</tr>
+<tr>
+  <td>☐ Email marketing</td>
+  <td>☐ Ninguno todavía</td>
+  <td>☐ Otro: ____________</td>
+</tr>
+</table>
+</div>
+
+<div class="campo">
+<h3>¿Hiciste publicidad paga antes? (Meta Ads, impulsados, Google Ads)</h3>
+<table class="check-tabla">
+<tr>
+  <td>☐ Sí, varias veces</td>
+  <td>☐ Una o dos veces</td>
+  <td>☐ Nunca</td>
+</tr>
+</table>
+<br>
+<span class="hint">Si hiciste, ¿qué resultado tuviste?</span>
+<div class="linea"></div>
+<div class="linea"></div>
+</div>
+
+<div class="campo">
+<h3>¿Tenés una lista de clientes o contactos? (WhatsApp, email)</h3>
+<table class="check-tabla">
+<tr>
+  <td>☐ Sí, bastantes &nbsp;&nbsp; Cantidad aprox: _______</td>
+  <td>☐ Tengo algunos</td>
+  <td>☐ No tengo</td>
+</tr>
+</table>
+</div>
+
+<div class="campo">
+<h3>¿Hay algo que hayas probado digitalmente y haya funcionado muy bien?</h3>
+<div class="linea"></div>
+<div class="linea"></div>
+</div>
+
+<div class="campo">
+<h3>¿Cuáles son tus objetivos con la presencia digital?</h3>
+<table class="check-tabla">
+<tr>
+  <td>☐ Conseguir más clientes nuevos</td>
+  <td>☐ Vender más a clientes actuales</td>
+</tr>
+<tr>
+  <td>☐ Ser más conocido en la zona</td>
+  <td>☐ Recibir pedidos o turnos online</td>
+</tr>
+<tr>
+  <td>☐ Mostrar mejor mis productos</td>
+  <td>☐ Diferenciarme de la competencia</td>
+</tr>
+</table>
+</div>
+
+<!-- FIRMA -->
+<br><br>
+<table class="firma-tabla">
+<tr>
+  <td style="width:33%;">Firma del cliente</td>
+  <td style="width:33%;">Nombre y negocio</td>
+  <td style="width:33%;">Fecha</td>
+</tr>
+</table>
+
+<br>
+<div class="footer-doc">
+  Atlantic Web · atlanticweb.netlify.app · +54 9 11 5743-2540
+</div>
+
+</body>
+</html>

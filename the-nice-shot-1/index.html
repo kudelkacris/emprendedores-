@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Nice Shot — Decants & Perfumes</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0a0a0a;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+      min-height: 100vh;
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px 20px;
+      background: radial-gradient(ellipse at top, #1a1a1a, #0a0a0a);
+    }
+
+    .hero-logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: #111;
+      border: 3px solid #c9a84c;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle, #1c1c1c, #000);
+      box-shadow: 0 0 30px rgba(201,168,76,0.3);
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+
+    .hero-logo-text {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #fff;
+      text-transform: uppercase;
+      line-height: 1;
+      letter-spacing: 2px;
+    }
+
+    .hero-logo-sub {
+      font-size: 0.55rem;
+      color: #c9a84c;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .hero-tagline {
+      font-size: 0.9rem;
+      color: #c9a84c;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .hero-title {
+      font-size: 1.1rem;
+      color: #888;
+      text-align: center;
+    }
+
+    /* CATALOG */
+    .catalog-section {
+      padding: 30px 16px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .catalog-section h2 {
+      text-align: center;
+      font-size: 1rem;
+      letter-spacing: 4px;
+      color: #c9a84c;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      border-bottom: 1px solid #2a2a2a;
+      padding-bottom: 12px;
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .product-card:hover { border-color: #c9a84c; }
+
+    .product-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      background: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+    }
+
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-img-placeholder {
+      width: 100%;
+      height: 180px;
+      background: linear-gradient(135deg, #1a1a1a, #111);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #444;
+      font-size: 2rem;
+    }
+
+    .product-info {
+      padding: 14px;
+    }
+
+    .product-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .product-brand {
+      font-size: 0.75rem;
+      color: #c9a84c;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .ml-selector {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    .ml-btn {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      color: #ccc;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      transition: all 0.15s;
+    }
+
+    .ml-btn:hover, .ml-btn.selected {
+      background: #c9a84c;
+      border-color: #c9a84c;
+      color: #000;
+      font-weight: 700;
+    }
+
+    .product-price {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #c9a84c;
+      margin-bottom: 12px;
+    }
+
+    .add-btn {
+      width: 100%;
+      background: #c9a84c;
+      color: #000;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: background 0.15s;
+    }
+
+    .add-btn:hover { background: #e0bb5e; }
+    .add-btn:active { transform: scale(0.98); }
+
+    /* CART */
+    .cart-fab {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #c9a84c;
+      color: #000;
+      border: none;
+      border-radius: 50px;
+      padding: 14px 22px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.9rem;
+      box-shadow: 0 4px 20px rgba(201,168,76,0.4);
+      z-index: 100;
+      display: none;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cart-fab.visible { display: flex; }
+
+    .cart-count {
+      background: #000;
+      color: #c9a84c;
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 900;
+    }
+
+    /* MODAL CARRITO */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 200;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .modal-overlay.open { display: flex; }
+
+    .modal {
+      background: #111;
+      border-top: 2px solid #c9a84c;
+      border-radius: 20px 20px 0 0;
+      width: 100%;
+      max-width: 600px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 24px;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .modal-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #c9a84c;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .close-btn {
+      background: #222;
+      border: none;
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #222;
+      gap: 12px;
+    }
+
+    .cart-item-info { flex: 1; }
+
+    .cart-item-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .cart-item-detail {
+      font-size: 0.75rem;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    .cart-item-price {
+      font-weight: 700;
+      color: #c9a84c;
+      white-space: nowrap;
+    }
+
+    .cart-item-remove {
+      background: none;
+      border: 1px solid #333;
+      color: #666;
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .cart-item-remove:hover { border-color: #ff4444; color: #ff4444; }
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      padding: 16px 0 20px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .cart-total span:last-child { color: #c9a84c; }
+
+    /* FORMULARIO */
+    .form-section {
+      border-top: 1px solid #222;
+      padding-top: 20px;
+    }
+
+    .form-section h3 {
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      color: #c9a84c;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.75rem;
+      color: #888;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .form-group input {
+      width: 100%;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    .form-group input:focus { border-color: #c9a84c; }
+
+    .send-btn {
+      width: 100%;
+      background: #25D366;
+      color: #fff;
+      border: none;
+      padding: 14px;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .send-btn:hover { background: #1fb858; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #444;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    footer a {
+      color: #c9a84c;
+      text-decoration: none;
+    }
+
+    .ig-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #c9a84c;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      margin-top: 14px;
+      padding: 8px 18px;
+      border: 1px solid #c9a84c33;
+      border-radius: 50px;
+      transition: background 0.2s;
+    }
+
+    .ig-link:hover { background: #c9a84c22; }
+
+    @media (max-width: 480px) {
+      .catalog-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .product-info { padding: 10px; }
+      .product-name { font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-logo">
+    <span class="hero-logo-text">NICE<br>SHOT</span>
+    <span class="hero-logo-sub">Tu aroma distingue</span>
+  </div>
+  <p class="hero-tagline">Decants &amp; Perfumes Originales</p>
+  <p class="hero-title">Fragancias de diseñador · 3ML · 5ML · 10ML</p>
+  <a href="https://instagram.com/theniceshot1" target="_blank" class="ig-link">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="#c9a84c"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    @theniceshot1
+  </a>
+</div>
+
+<!-- CATÁLOGO -->
+<div class="catalog-section">
+  <h2>Catálogo</h2>
+  <div class="catalog-grid" id="catalogGrid"></div>
+</div>
+
+<!-- CARRITO FAB -->
+<button class="cart-fab" id="cartFab" onclick="openCart()">
+  🛒 Ver carrito
+  <span class="cart-count" id="cartCount">0</span>
+</button>
+
+<!-- MODAL CARRITO + FORMULARIO -->
+<div class="modal-overlay" id="cartModal">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="modal-title">Tu pedido</span>
+      <button class="close-btn" onclick="closeCart()">✕</button>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">$0</span>
+    </div>
+
+    <div class="form-section">
+      <h3>Tus datos</h3>
+      <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" id="fNombre" placeholder="Tu nombre" />
+      </div>
+      <div class="form-group">
+        <label>Apellido</label>
+        <input type="text" id="fApellido" placeholder="Tu apellido" />
+      </div>
+      <div class="form-group">
+        <label>Ciudad</label>
+        <input type="text" id="fCiudad" placeholder="Tu ciudad" />
+      </div>
+      <div class="form-group">
+        <label>Dirección</label>
+        <input type="text" id="fDireccion" placeholder="Calle, número, piso..." />
+      </div>
+      <div class="form-group">
+        <label>Tu WhatsApp</label>
+        <input type="tel" id="fWpp" placeholder="Ej: 2266123456" />
+      </div>
+      <button class="send-btn" onclick="enviarPedido()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Enviar pedido por WhatsApp
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 The Nice Shot · <a href="https://instagram.com/theniceshot1" target="_blank">@theniceshot1</a></p>
+</footer>
+
+<script>
+  // ── PRODUCTOS ──────────────────────────────────────────────
+  const productos = [
+    { id: 1,  nombre: "Scandal",           marca: "JPG",        precios: { "3ML": 9000,  "5ML": 14000, "10ML": 23200 }, img: "" },
+    { id: 2,  nombre: "Scandal (mujer)",   marca: "JPG",        precios: { "3ML": 9000,  "5ML": 14000, "10ML": 23200 }, img: "" },
+    { id: 3,  nombre: "Le Beau",           marca: "JPG",        precios: { "3ML": 8000,  "5ML": 12200, "10ML": 22500 }, img: "" },
+    { id: 4,  nombre: "Born in Roma Extradose", marca: "Valentino", precios: { "3ML": 15000, "5ML": 20000, "10ML": 32500 }, img: "" },
+    { id: 5,  nombre: "Erba Pura",         marca: "Xerjoff",    precios: { "3ML": 15700, "5ML": 22500, "10ML": 32000 }, img: "" },
+    { id: 6,  nombre: "Devotion",          marca: "D&G",        precios: { "3ML": 9000,  "5ML": 13700, "10ML": 23200 }, img: "" },
+    { id: 7,  nombre: "Flower",            marca: "Kenzo",      precios: { "3ML": 8000,  "5ML": 12000, "10ML": 20000 }, img: "" },
+    { id: 8,  nombre: "Good Girl",         marca: "CH",         precios: { "3ML": 10500, "5ML": 15000, "10ML": 27000 }, img: "" },
+    { id: 9,  nombre: "Wanted",            marca: "Azzaro",     precios: { "3ML": 8000,  "5ML": 11000, "10ML": 20000 }, img: "" },
+    { id: 10, nombre: "L'Interdit",        marca: "Givenchy",   precios: { "3ML": 11000, "5ML": 16000, "10ML": 28000 }, img: "" },
+    { id: 11, nombre: "Le Male Elixir",    marca: "JPG",        precios: { "3ML": 10500, "5ML": 15000, "10ML": 27000 }, img: "" },
+    { id: 12, nombre: "Stronger With You Intensely", marca: "Armani", precios: { "3ML": 14000, "5ML": 16000, "10ML": 28000 }, img: "" },
+  ];
+
+  // WPP de Maki — cambiar por el número real
+  const MAKI_WPP = "5492236247791";
+
+  // ── ESTADO ─────────────────────────────────────────────────
+  const seleccion = {}; // id → ml seleccionado
+  const carrito   = []; // { id, nombre, marca, ml, precio }
+
+  // ── RENDER CATÁLOGO ────────────────────────────────────────
+  function renderCatalogo() {
+    const grid = document.getElementById("catalogGrid");
+    grid.innerHTML = "";
+
+    productos.forEach(p => {
+      const mls = Object.keys(p.precios);
+      if (!seleccion[p.id]) seleccion[p.id] = mls[0];
+
+      const card = document.createElement("div");
+      card.className = "product-card";
+      card.id = `card-${p.id}`;
+
+      const mlBtns = mls.map(ml => `
+        <button class="ml-btn ${seleccion[p.id] === ml ? 'selected' : ''}"
+          onclick="selectML(${p.id}, '${ml}')">${ml}</button>
+      `).join("");
+
+      const precio = p.precios[seleccion[p.id]];
+
+      card.innerHTML = `
+        <div class="product-img-placeholder">🌸</div>
+        <div class="product-info">
+          <div class="product-name">${p.nombre}</div>
+          <div class="product-brand">${p.marca}</div>
+          <div class="ml-selector">${mlBtns}</div>
+          <div class="product-price" id="price-${p.id}">$${precio.toLocaleString("es-AR")}</div>
+          <button class="add-btn" onclick="agregarAlCarrito(${p.id})">+ Agregar</button>
+        </div>
+      `;
+
+      grid.appendChild(card);
+    });
+  }
+
+  function selectML(id, ml) {
+    seleccion[id] = ml;
+    const card = document.getElementById(`card-${id}`);
+    card.querySelectorAll(".ml-btn").forEach(btn => {
+      btn.classList.toggle("selected", btn.textContent === ml);
+    });
+    const p = productos.find(x => x.id === id);
+    document.getElementById(`price-${id}`).textContent = "$" + p.precios[ml].toLocaleString("es-AR");
+  }
+
+  // ── CARRITO ────────────────────────────────────────────────
+  function agregarAlCarrito(id) {
+    const p = productos.find(x => x.id === id);
+    const ml = seleccion[id];
+    carrito.push({ id, nombre: p.nombre, marca: p.marca, ml, precio: p.precios[ml] });
+    actualizarFAB();
+
+    // feedback visual
+    const btn = document.querySelector(`#card-${id} .add-btn`);
+    btn.textContent = "✓ Agregado";
+    btn.style.background = "#2a7a2a";
+    setTimeout(() => { btn.textContent = "+ Agregar"; btn.style.background = ""; }, 1200);
+  }
+
+  function eliminarItem(i) {
+    carrito.splice(i, 1);
+    actualizarFAB();
+    renderCartItems();
+  }
+
+  function actualizarFAB() {
+    const fab = document.getElementById("cartFab");
+    const count = document.getElementById("cartCount");
+    count.textContent = carrito.length;
+    fab.classList.toggle("visible", carrito.length > 0);
+  }
+
+  function openCart()  { document.getElementById("cartModal").classList.add("open"); renderCartItems(); }
+  function closeCart() { document.getElementById("cartModal").classList.remove("open"); }
+
+  function renderCartItems() {
+    const container = document.getElementById("cartItems");
+    const totalEl   = document.getElementById("cartTotal");
+
+    if (carrito.length === 0) {
+      container.innerHTML = `<p style="color:#666;text-align:center;padding:20px 0;">Carrito vacío</p>`;
+      totalEl.textContent = "$0";
+      return;
+    }
+
+    container.innerHTML = carrito.map((item, i) => `
+      <div class="cart-item">
+        <div class="cart-item-info">
+          <div class="cart-item-name">${item.nombre}</div>
+          <div class="cart-item-detail">${item.marca} · ${item.ml}</div>
+        </div>
+        <div class="cart-item-price">$${item.precio.toLocaleString("es-AR")}</div>
+        <button class="cart-item-remove" onclick="eliminarItem(${i})">✕</button>
+      </div>
+    `).join("");
+
+    const total = carrito.reduce((s, x) => s + x.precio, 0);
+    totalEl.textContent = "$" + total.toLocaleString("es-AR");
+  }
+
+  // ── ENVIAR PEDIDO ──────────────────────────────────────────
+  function enviarPedido() {
+    if (carrito.length === 0) { alert("Agregá al menos un producto."); return; }
+
+    const nombre   = document.getElementById("fNombre").value.trim();
+    const apellido = document.getElementById("fApellido").value.trim();
+    const ciudad   = document.getElementById("fCiudad").value.trim();
+    const direccion= document.getElementById("fDireccion").value.trim();
+    const wpp      = document.getElementById("fWpp").value.trim();
+
+    if (!nombre || !apellido || !ciudad || !direccion || !wpp) {
+      alert("Completá todos los campos antes de enviar."); return;
+    }
+
+    const total = carrito.reduce((s, x) => s + x.precio, 0);
+
+    const lineas = carrito.map(item =>
+      `• ${item.nombre} (${item.marca}) · ${item.ml} — $${item.precio.toLocaleString("es-AR")}`
+    ).join("\n");
+
+    const msg = [
+      "🌟 *NUEVO PEDIDO — THE NICE SHOT*",
+      "",
+      `👤 *Cliente:* ${nombre} ${apellido}`,
+      `📍 *Ciudad:* ${ciudad}`,
+      `🏠 *Dirección:* ${direccion}`,
+      `📱 *WhatsApp:* ${wpp}`,
+      "",
+      "🛒 *Productos:*",
+      lineas,
+      "",
+      `💰 *Total: $${total.toLocaleString("es-AR")}*`,
+    ].join("\n");
+
+    const url = `https://wa.me/${MAKI_WPP}?text=${encodeURIComponent(msg)}`;
+    window.open(url, "_blank");
+  }
+
+  // ── INIT ───────────────────────────────────────────────────
+  renderCatalogo();
+</script>
+</body>
+</html>

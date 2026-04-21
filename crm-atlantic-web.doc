@@ -1,0 +1,559 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="UTF-8">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<title>CRM Atlantic Web</title>
+<style>
+  body { font-family: Calibri, Arial, sans-serif; font-size: 10pt; margin: 1.5cm; color: #111; }
+  h1 { font-size: 18pt; color: #c9a84c; border-bottom: 3px solid #c9a84c; padding-bottom: 6px; margin-bottom: 4px; }
+  h2 { font-size: 12pt; color: #111; margin-top: 22px; border-left: 4px solid #c9a84c; padding-left: 8px; }
+  .subtitulo { color: #555; font-size: 10pt; margin-bottom: 16px; }
+
+  table { border-collapse: collapse; width: 100%; margin: 10px 0 20px 0; font-size: 9.5pt; }
+  th { background: #111010; color: #c9a84c; padding: 7px 8px; text-align: left; font-size: 9pt; border: 1px solid #333; }
+  td { border: 1px solid #ccc; padding: 6px 8px; vertical-align: top; }
+  tr:nth-child(even) td { background: #f5f5f5; }
+
+  .estado-contactar { background: #fff3cd; color: #856404; font-weight: bold; padding: 2px 6px; border-radius: 3px; }
+  .estado-contactado { background: #d1ecf1; color: #0c5460; font-weight: bold; padding: 2px 6px; border-radius: 3px; }
+  .estado-interesado { background: #d4edda; color: #155724; font-weight: bold; padding: 2px 6px; border-radius: 3px; }
+  .estado-adn { background: #e2d9f3; color: #432874; font-weight: bold; padding: 2px 6px; border-radius: 3px; }
+  .estado-propuesta { background: #ffd6a5; color: #7d4400; font-weight: bold; padding: 2px 6px; border-radius: 3px; }
+  .estado-cliente { background: #111010; color: #c9a84c; font-weight: bold; padding: 2px 6px; border-radius: 3px; }
+  .estado-descartado { background: #f8d7da; color: #721c24; font-weight: bold; padding: 2px 6px; border-radius: 3px; }
+
+  .linea { border-bottom: 1px solid #bbb; min-height: 14px; margin: 2px 0; }
+  .ref-box { background: #fafafa; border: 1px solid #e0e0e0; padding: 10px 14px; margin: 8px 0; font-size: 9pt; }
+  .ref-box strong { display: inline-block; width: 120px; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 18px 0; }
+  .pie { color: #999; font-size: 8.5pt; text-align: center; margin-top: 20px; }
+  .mensaje-wpp { background: #e8f5e9; border-left: 4px solid #4caf50; padding: 8px 12px; font-size: 9pt; margin: 6px 0; }
+  .col-estado { width: 100px; }
+  .col-fecha { width: 70px; }
+  .col-monto { width: 70px; }
+  .col-canal { width: 80px; }
+</style>
+</head>
+<body>
+
+<h1>CRM — Atlantic Web</h1>
+<p class="subtitulo">Gestión de prospectos y clientes — actualizar después de cada contacto</p>
+
+<h2>Estados posibles</h2>
+<p>
+  <span class="estado-contactar">Por contactar</span> &nbsp;
+  <span class="estado-contactado">Contactado</span> &nbsp;
+  <span class="estado-interesado">Interesado</span> &nbsp;
+  <span class="estado-adn">ADN enviado</span> &nbsp;
+  <span class="estado-propuesta">Propuesta enviada</span> &nbsp;
+  <span class="estado-cliente">CLIENTE</span> &nbsp;
+  <span class="estado-descartado">Descartado</span>
+</p>
+
+<hr>
+
+<h2>Tabla de prospectos</h2>
+
+<table>
+  <tr>
+    <th>#</th>
+    <th>Nombre</th>
+    <th>Negocio / Rubro</th>
+    <th>Ubicación</th>
+    <th>WhatsApp</th>
+    <th>Instagram</th>
+    <th>Tiene web</th>
+    <th class="col-canal">Canal de contacto</th>
+    <th class="col-fecha">1er contacto</th>
+    <th class="col-fecha">Último contacto</th>
+    <th class="col-fecha">Seguimiento</th>
+    <th class="col-estado">Estado</th>
+    <th class="col-monto">Cotizado</th>
+    <th class="col-monto">Cobrado</th>
+    <th>Notas</th>
+  </tr>
+
+  <!-- FILA EJEMPLO -->
+  <tr>
+    <td>1</td>
+    <td>Mariano García</td>
+    <td>Pizzería / Gastronomía</td>
+    <td>Santa Clara del Mar</td>
+    <td>+54 9 11 XXXX-XXXX</td>
+    <td>@marianopizza</td>
+    <td>No</td>
+    <td>Presencial</td>
+    <td>16/04/26</td>
+    <td>16/04/26</td>
+    <td>18/04/26</td>
+    <td><span class="estado-contactado">Contactado</span></td>
+    <td>$70 USD</td>
+    <td>—</td>
+    <td>Le mandé el pitch por WPP. Quedó en verlo.</td>
+  </tr>
+
+  <!-- FILAS EN BLANCO PARA COMPLETAR -->
+  <tr>
+    <td>2</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>19</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>Ficha detallada de prospecto</h2>
+<p style="font-size:9pt; color:#555;">Completar una ficha por cada prospecto importante. Copiar y pegar la sección para agregar más.</p>
+
+<div class="ref-box">
+  <strong>Nombre:</strong> <div class="linea"></div><br>
+  <strong>Negocio:</strong> <div class="linea"></div><br>
+  <strong>Rubro:</strong> <div class="linea"></div><br>
+  <strong>Ubicación:</strong> <div class="linea"></div><br>
+  <strong>WhatsApp:</strong> <div class="linea"></div><br>
+  <strong>Instagram:</strong> <div class="linea"></div><br>
+  <strong>Email:</strong> <div class="linea"></div><br>
+  <strong>Tiene web:</strong> &nbsp; Sí &nbsp;&nbsp; No &nbsp;&nbsp; En construcción<br><br>
+  <strong>Canal de origen:</strong> &nbsp; Presencial &nbsp;&nbsp; WhatsApp &nbsp;&nbsp; Instagram &nbsp;&nbsp; Referido &nbsp;&nbsp; Otro<br><br>
+  <strong>Problema principal:</strong><br>
+  <div class="linea"></div>
+  <div class="linea"></div><br>
+  <strong>Por qué le conviene una web:</strong><br>
+  <div class="linea"></div>
+  <div class="linea"></div><br>
+  <strong>Objeción principal:</strong><br>
+  <div class="linea"></div>
+  <div class="linea"></div><br>
+  <strong>Respuesta a la objeción:</strong><br>
+  <div class="linea"></div>
+  <div class="linea"></div><br>
+  <strong>Monto cotizado:</strong> <div class="linea" style="width:80px; display:inline-block;"></div> &nbsp;&nbsp;
+  <strong>Monto cobrado:</strong> <div class="linea" style="width:80px; display:inline-block;"></div><br><br>
+  <strong>Historial de contactos:</strong><br>
+  <div class="linea"></div>
+  <div class="linea"></div>
+  <div class="linea"></div>
+  <div class="linea"></div><br>
+  <strong>Próximo paso:</strong><br>
+  <div class="linea"></div>
+  <strong>Fecha de seguimiento:</strong> <div class="linea" style="width:100px; display:inline-block;"></div>
+</div>
+
+<hr>
+
+<h2>Mensajes de WhatsApp listos para usar</h2>
+
+<p><strong>Primer contacto (frío):</strong></p>
+<div class="mensaje-wpp">
+Hola [Nombre], ¿cómo estás? Soy Niki de Atlantic Web. Vi que tenés [negocio] en Santa Clara. Ayudo a negocios locales a tener presencia digital con páginas web simples y efectivas. Te mando un ejemplo de lo que hacemos: atlanticweb.netlify.app — ¿tenés 5 minutos para verlo?
+</div>
+
+<p><strong>Seguimiento si no respondió:</strong></p>
+<div class="mensaje-wpp">
+Hola [Nombre], te escribí hace unos días por lo de la página web. Entiendo que estás ocupado, no hay problema. Cuando quieras charlarlo, estoy disponible.
+</div>
+
+<p><strong>Después de mandar el pitch:</strong></p>
+<div class="mensaje-wpp">
+[Nombre], te mandé el PDF con toda la info. En resumen: la página queda lista en 7 días, cuesta $70 USD pago único y $5 USD/mes de hosting. Si querés avanzar, el siguiente paso es que completes un formulario corto para conocer mejor tu negocio. ¿Te parece?
+</div>
+
+<p><strong>Al enviar el formulario ADN:</strong></p>
+<div class="mensaje-wpp">
+Perfecto [Nombre], te mando el formulario para que puedas completarlo cuando tengas un momento. Con esos datos armamos algo específico para tu negocio, no un template genérico. [adjuntar adn-cliente.doc]
+</div>
+
+<p><strong>Cliente confirmado — cierre:</strong></p>
+<div class="mensaje-wpp">
+Buenísimo [Nombre], arrancamos. Para confirmar el proyecto necesito: 1) el formulario completo, 2) el pago del 50% inicial ($35 USD). Una vez que lo reciba, en 7 días tenés el sitio listo. ¿Preferís transferencia o Mercado Pago?
+</div>
+
+<hr>
+
+<h2>Resumen financiero mensual</h2>
+
+<table>
+  <tr>
+    <th>Mes</th>
+    <th>Nuevos clientes</th>
+    <th>Total cobrado</th>
+    <th>Hosting recurrente</th>
+    <th>Total mes</th>
+    <th>Notas</th>
+  </tr>
+  <tr>
+    <td>Abril 2026</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>Mayo 2026</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>Junio 2026</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>Julio 2026</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>Agosto 2026</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+  <tr>
+    <td>Septiembre 2026</td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+    <td><div class="linea"></div></td>
+  </tr>
+</table>
+
+<hr>
+<p class="pie">Atlantic Web — CRM interno — Versión 1.0 — Abril 2026</p>
+
+</body>
+</html>

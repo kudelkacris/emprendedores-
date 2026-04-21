@@ -1,0 +1,173 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="UTF-8">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<title>Agenda Semana 16-22 Abril 2026</title>
+<style>
+  body { font-family: Calibri, Arial, sans-serif; font-size: 11pt; margin: 2cm; color: #111; }
+  h1 { font-size: 20pt; color: #c9a84c; border-bottom: 2px solid #c9a84c; padding-bottom: 6px; }
+  h2 { font-size: 14pt; color: #111; margin-top: 24px; border-left: 4px solid #c9a84c; padding-left: 10px; }
+  h3 { font-size: 12pt; color: #333; margin-top: 16px; }
+  p { line-height: 1.6; margin: 6px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+  td, th { border: 1px solid #ccc; padding: 8px 12px; vertical-align: top; }
+  th { background: #111; color: #c9a84c; font-weight: bold; }
+  tr:nth-child(even) { background: #f9f9f9; }
+  .dia { background: #111; color: #c9a84c; font-weight: bold; padding: 6px 12px; margin-top: 20px; display: block; font-size: 12pt; }
+  .tarea { margin: 4px 0 4px 16px; }
+  .tag-urgente { color: #c00; font-weight: bold; }
+  .tag-facil { color: #080; }
+  .tag-largo { color: #888; }
+  .video-card { border: 1px solid #ddd; padding: 12px; margin: 12px 0; background: #fafafa; }
+  .video-titulo { font-weight: bold; font-size: 12pt; color: #111; }
+  .video-por-que { color: #555; font-style: italic; margin-top: 4px; }
+  .separador { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
+</style>
+</head>
+<body>
+
+<h1>Agenda Semana — 16 al 22 de Abril 2026</h1>
+<p>Arranca: miércoles 16 a las 14:00 hs | Elaborado por Filo</p>
+
+<hr class="separador">
+
+<h2>Estado de proyectos — dónde estamos</h2>
+
+<table>
+  <tr>
+    <th>Proyecto</th>
+    <th>Estado</th>
+    <th>Potencial</th>
+    <th>Próximo paso</th>
+  </tr>
+  <tr>
+    <td><strong>Atlantic Web</strong></td>
+    <td>ACTIVO</td>
+    <td style="color:#080">MUY ALTO</td>
+    <td>Salir a vender. Todo listo: pitch, demos, formulario ADN, precio definido</td>
+  </tr>
+  <tr>
+    <td><strong>Noir Fragancia</strong></td>
+    <td>95% listo</td>
+    <td style="color:#c9a84c">ALTO</td>
+    <td>Agregar links de Mercado Pago al carrito. 1 hora de trabajo</td>
+  </tr>
+  <tr>
+    <td><strong>SANTACLA</strong></td>
+    <td>Live (122 productos)</td>
+    <td style="color:#c9a84c">ALTO</td>
+    <td>Fix nombres concatenados. Luego ya está para operar</td>
+  </tr>
+  <tr>
+    <td><strong>Toiansky Agent</strong></td>
+    <td>En desarrollo</td>
+    <td style="color:#888">MEDIO</td>
+    <td>Verificar auth n8n + definir qué automatizar primero</td>
+  </tr>
+</table>
+
+<hr class="separador">
+
+<h2>Prioridad de la semana</h2>
+<p>Esta semana el foco es <strong>Atlantic Web</strong>. Los materiales están listos. Lo que falta es salir a hablar con gente. El negocio no crece solo.</p>
+<p>El orden lógico:</p>
+<p class="tarea">1. Terminar los pendientes técnicos (conectar los 3 sitios a GitHub)</p>
+<p class="tarea">2. Ir a hablar con prospectos reales (Mariano primero)</p>
+<p class="tarea">3. Cerrar Noir Fragancia (1 hora, gran impacto)</p>
+<p class="tarea">4. Si sobra tiempo: SANTACLA fix nombres</p>
+
+<hr class="separador">
+
+<h2>Agenda día por día</h2>
+
+<span class="dia">MIÉRCOLES 16 — Arranque de semana (desde las 14:00)</span>
+<p><strong>Objetivo:</strong> Dejar los 3 sitios demo conectados a GitHub + primer contacto con prospecto</p>
+<p class="tarea">14:00 — Conectar dontiburcio.netlify.app al repo kudelkacris/emprendedores- (publish dir: demo)</p>
+<p class="tarea">14:30 — Conectar mareachic.netlify.app (publish dir: cuties-girls)</p>
+<p class="tarea">15:00 — Conectar baronbarberia.netlify.app (publish dir: baron-barberia)</p>
+<p class="tarea">15:30 — Verificar auto-deploy: hacer un cambio pequeño y confirmar que Netlify actualiza</p>
+<p class="tarea">16:00 — Mandar el pitch por WhatsApp a Mariano. Solo mandar, sin presionar</p>
+<p class="tarea">16:30 — Libre / revisar los videos de abajo</p>
+
+<span class="dia">JUEVES 17 — Noir Fragancia + venta</span>
+<p><strong>Objetivo:</strong> Cerrar Noir Fragancia y seguir con prospectos</p>
+<p class="tarea">Mañana — Abrir noirfragancia.vercel.app y agregar links de Mercado Pago al carrito</p>
+<p class="tarea">Mañana — Probar flujo completo de compra</p>
+<p class="tarea">Tarde — Si Mariano no respondió, mandar a un segundo prospecto conocido</p>
+<p class="tarea">Tarde — Preparar lista de 5 negocios locales para contactar esta semana</p>
+
+<span class="dia">VIERNES 18 — Salir a la calle</span>
+<p><strong>Objetivo:</strong> Contacto presencial o por WhatsApp con al menos 2 negocios nuevos</p>
+<p class="tarea">Mañana — Revisar respuestas de prospectos anteriores</p>
+<p class="tarea">Tarde — Visitar o escribir a 2 negocios de la lista</p>
+<p class="tarea">Tarde — Si consiguieron interés: mandar adn-cliente.doc para que completen</p>
+
+<span class="dia">SÁBADO 19 — SANTACLA fix + pausa</span>
+<p><strong>Objetivo:</strong> Resolver los nombres concatenados de SANTACLA</p>
+<p class="tarea">Con Filo: debuggear el fix de nombres (ej: "RopaDeportiva" → "Ropa Deportiva")</p>
+<p class="tarea">Verificar que los 122 productos existentes queden bien</p>
+<p class="tarea">Si queda tiempo: explorar Cloudinary para automatizar carga de fotos de clientes Atlantic Web</p>
+
+<span class="dia">DOMINGO 20 — Día de pensar, no de hacer</span>
+<p><strong>Objetivo:</strong> Sin código. Reflexión estratégica</p>
+<p class="tarea">Ver los 4 videos de abajo si no los viste</p>
+<p class="tarea">Escribir en papel: ¿cuántos clientes querés tener en 60 días? ¿Qué necesitás para llegar?</p>
+<p class="tarea">Revisar el ADN de Atlantic Web como negocio (no solo como herramienta para clientes)</p>
+
+<span class="dia">LUNES 21 — Seguimiento comercial</span>
+<p><strong>Objetivo:</strong> Cerrar o avanzar con alguno de los prospectos contactados</p>
+<p class="tarea">Responder consultas de la semana</p>
+<p class="tarea">Si alguien llenó el ADN: reunirse (presencial o video) y arrancar el sitio</p>
+<p class="tarea">Si nadie respondió: ampliar la lista de prospectos, ajustar el mensaje de contacto</p>
+
+<span class="dia">MARTES 22 — Cierre de semana</span>
+<p><strong>Objetivo:</strong> Evaluar la semana y preparar la siguiente</p>
+<p class="tarea">Hacer el resumen del día en resumenes/2026-04-22.txt</p>
+<p class="tarea">¿Cuántos contactos hiciste? ¿Cuántos respondieron? ¿Cuántos clientes nuevos?</p>
+<p class="tarea">Con Filo: definir el foco de la semana siguiente según resultados</p>
+
+<hr class="separador">
+
+<h2>4 videos para ver esta semana</h2>
+<p>Los elegí por utilidad directa para lo que estás construyendo, no por popularidad.</p>
+
+<div class="video-card">
+  <div class="video-titulo">1. Alex Hormozi — "How to Get Your First 10 Customers"</div>
+  <p class="video-por-que">Por qué verlo: Hormozi explica de forma brutal y simple cómo conseguir los primeros clientes sin dinero ni audiencia. Aplica directo a Atlantic Web. La semana que viene vas a hablar con gente — este video te da el marco mental para hacerlo bien.</p>
+  <p>Buscar en YouTube: <strong>Alex Hormozi first 10 customers</strong></p>
+</div>
+
+<div class="video-card">
+  <div class="video-titulo">2. Lenny Rachitsky — "The Most Effective Pricing Strategy for Small Businesses"</div>
+  <p class="video-por-que">Por qué verlo: $70 USD está bien para arrancar, pero ¿cómo subís el precio sin perder clientes? Este video explica psicología de precios para servicios creativos. Relevante antes de escalar.</p>
+  <p>Buscar en YouTube: <strong>Lenny pricing strategy small business 2024</strong></p>
+</div>
+
+<div class="video-card">
+  <div class="video-titulo">3. Pieter Levels — cómo construyó 12 startups en 12 meses</div>
+  <p class="video-por-que">Por qué verlo: Levels es el referente de construir productos pequeños, rápidos y rentables sin inversión. Su filosofía encaja perfecto con lo que hacemos: landings simples, precio bajo, volumen. Inspiración real, no motivacional.</p>
+  <p>Buscar en YouTube: <strong>Pieter Levels 12 startups 12 months</strong></p>
+</div>
+
+<div class="video-card">
+  <div class="video-titulo">4. n8n — automatización de onboarding de clientes</div>
+  <p class="video-por-que">Por qué verlo: Tenemos n8n instalado y sin usar. Este tipo de video muestra cómo automatizar el flujo cliente → formulario ADN → notificación → carpeta organizada. En 2 horas podés tener eso funcionando y parecer una agencia de 10 personas siendo solo vos.</p>
+  <p>Buscar en YouTube: <strong>n8n client onboarding automation workflow</strong></p>
+</div>
+
+<hr class="separador">
+
+<h2>Regla de la semana</h2>
+<p style="font-size:13pt; font-style:italic; color:#333;">
+"El trabajo técnico ya está hecho. Esta semana el trabajo es humano: hablar, convencer, vender."
+</p>
+<p>Filo puede ayudarte a preparar mensajes, ajustar el pitch, responder preguntas técnicas de clientes. Pero el paso que nadie más puede dar eres vos.</p>
+
+<hr class="separador">
+<p style="color:#888; font-size:9pt; text-align:center;">Elaborado por Filo — Atlantic Web — Semana del 16 al 22 de Abril 2026</p>
+
+</body>
+</html>

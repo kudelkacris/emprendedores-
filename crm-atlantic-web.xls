@@ -1,0 +1,185 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="UTF-8">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 15">
+<title>CRM Atlantic Web</title>
+<style>
+  body { font-family: Calibri, Arial, sans-serif; font-size: 10pt; }
+  table { border-collapse: collapse; }
+  td, th { border: 1px solid #bbb; padding: 5px 8px; white-space: nowrap; }
+
+  /* Encabezados */
+  .header-main { background: #111010; color: #c9a84c; font-weight: bold; font-size: 11pt; text-align: center; }
+  .header-col { background: #2c2c2c; color: #ffffff; font-weight: bold; font-size: 9.5pt; }
+  .header-section { background: #c9a84c; color: #111; font-weight: bold; font-size: 10pt; }
+
+  /* Estados */
+  .e-contactar   { background: #fff3cd; color: #856404; }
+  .e-contactado  { background: #d1ecf1; color: #0c5460; }
+  .e-interesado  { background: #d4edda; color: #155724; }
+  .e-adn         { background: #e2d9f3; color: #432874; }
+  .e-propuesta   { background: #ffd6a5; color: #7d4400; }
+  .e-cliente     { background: #111010; color: #c9a84c; font-weight: bold; }
+  .e-descartado  { background: #f8d7da; color: #721c24; }
+
+  /* Alternado filas */
+  .fila-par  { background: #f5f5f5; }
+  .fila-impar { background: #ffffff; }
+
+  /* Referencia */
+  .ref { background: #fffde7; }
+  .vacio { color: #ccc; font-style: italic; }
+</style>
+</head>
+<body>
+
+<!-- HOJA 1: PROSPECTOS -->
+<table>
+
+  <!-- TITULO -->
+  <tr>
+    <td colspan="17" class="header-main" style="font-size:14pt; padding: 10px;">
+      CRM — Atlantic Web — Gestión de Prospectos y Clientes
+    </td>
+  </tr>
+  <tr>
+    <td colspan="17" style="background:#222; color:#aaa; text-align:center; font-size:9pt; padding:4px;">
+      Actualizar después de cada contacto · Estados: Por contactar / Contactado / Interesado / ADN enviado / Propuesta enviada / CLIENTE / Descartado
+    </td>
+  </tr>
+
+  <!-- ENCABEZADOS -->
+  <tr>
+    <td class="header-col" style="width:30px;">#</td>
+    <td class="header-col" style="width:130px;">Nombre</td>
+    <td class="header-col" style="width:130px;">Negocio</td>
+    <td class="header-col" style="width:100px;">Rubro</td>
+    <td class="header-col" style="width:110px;">Ubicación</td>
+    <td class="header-col" style="width:120px;">WhatsApp</td>
+    <td class="header-col" style="width:120px;">Instagram</td>
+    <td class="header-col" style="width:60px;">Tiene web</td>
+    <td class="header-col" style="width:100px;">Canal contacto</td>
+    <td class="header-col" style="width:80px;">1er contacto</td>
+    <td class="header-col" style="width:80px;">Último contacto</td>
+    <td class="header-col" style="width:80px;">Seguimiento</td>
+    <td class="header-col" style="width:110px;">Estado</td>
+    <td class="header-col" style="width:80px;">Cotizado</td>
+    <td class="header-col" style="width:80px;">Cobrado</td>
+    <td class="header-col" style="width:60px;">% cobrado</td>
+    <td class="header-col" style="width:220px;">Notas</td>
+  </tr>
+
+  <!-- FILA EJEMPLO -->
+  <tr class="ref">
+    <td>1</td>
+    <td>Mariano García</td>
+    <td>La Buena Pizza</td>
+    <td>Gastronomía</td>
+    <td>Santa Clara del Mar</td>
+    <td>+54 9 11 XXXX-XXXX</td>
+    <td>@labuenapizza</td>
+    <td>No</td>
+    <td>Presencial</td>
+    <td>16/04/2026</td>
+    <td>16/04/2026</td>
+    <td>18/04/2026</td>
+    <td class="e-contactado">Contactado</td>
+    <td>$70 USD</td>
+    <td>—</td>
+    <td>0%</td>
+    <td>Le mandé el pitch por WPP. Quedó en verlo.</td>
+  </tr>
+
+  <!-- FILAS EN BLANCO x30 -->
+  <tr class="fila-par"><td>2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-impar"><td>3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-par"><td>4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-impar"><td>5</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-par"><td>6</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-impar"><td>7</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-par"><td>8</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-impar"><td>9</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-par"><td>10</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-impar"><td>11</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-par"><td>12</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-impar"><td>13</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-par"><td>14</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-impar"><td>15</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-par"><td>16</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-impar"><td>17</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-par"><td>18</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-impar"><td>19</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-par"><td>20</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-impar"><td>21</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-par"><td>22</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-impar"><td>23</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-par"><td>24</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-impar"><td>25</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-par"><td>26</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-impar"><td>27</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-par"><td>28</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-impar"><td>29</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="fila-par"><td>30</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="e-contactar">Por contactar</td><td></td><td></td><td></td><td></td></tr>
+
+  <!-- SEPARADOR -->
+  <tr><td colspan="17" style="height:20px; background:#fff; border:none;"></td></tr>
+
+  <!-- RESUMEN FINANCIERO -->
+  <tr>
+    <td colspan="17" class="header-section">RESUMEN FINANCIERO MENSUAL</td>
+  </tr>
+  <tr>
+    <td class="header-col" colspan="2">Mes</td>
+    <td class="header-col" colspan="2">Clientes nuevos</td>
+    <td class="header-col" colspan="2">Ingresos nuevos (USD)</td>
+    <td class="header-col" colspan="2">Hosting recurrente (USD)</td>
+    <td class="header-col" colspan="2">Total mes (USD)</td>
+    <td class="header-col" colspan="2">Clientes activos hosting</td>
+    <td class="header-col" colspan="5">Notas</td>
+  </tr>
+  <tr class="fila-par"><td colspan="2">Abril 2026</td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="5"></td></tr>
+  <tr class="fila-impar"><td colspan="2">Mayo 2026</td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="5"></td></tr>
+  <tr class="fila-par"><td colspan="2">Junio 2026</td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="5"></td></tr>
+  <tr class="fila-impar"><td colspan="2">Julio 2026</td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="5"></td></tr>
+  <tr class="fila-par"><td colspan="2">Agosto 2026</td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="5"></td></tr>
+  <tr class="fila-impar"><td colspan="2">Septiembre 2026</td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="5"></td></tr>
+  <tr class="fila-par"><td colspan="2">Octubre 2026</td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="5"></td></tr>
+  <tr class="fila-impar"><td colspan="2">Noviembre 2026</td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="5"></td></tr>
+  <tr class="fila-par"><td colspan="2">Diciembre 2026</td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="5"></td></tr>
+
+  <!-- SEPARADOR -->
+  <tr><td colspan="17" style="height:20px; background:#fff; border:none;"></td></tr>
+
+  <!-- PIPELINE -->
+  <tr>
+    <td colspan="17" class="header-section">PIPELINE — CUÁNTOS EN CADA ESTADO HOY</td>
+  </tr>
+  <tr>
+    <td class="header-col" colspan="3">Estado</td>
+    <td class="header-col" colspan="2">Cantidad</td>
+    <td class="header-col" colspan="4">Valor potencial (USD)</td>
+    <td class="header-col" colspan="8">Acción requerida</td>
+  </tr>
+  <tr><td colspan="3" class="e-contactar">Por contactar</td><td colspan="2"></td><td colspan="4"></td><td colspan="8">Mandar mensaje inicial + pitch</td></tr>
+  <tr><td colspan="3" class="e-contactado">Contactado</td><td colspan="2"></td><td colspan="4"></td><td colspan="8">Hacer seguimiento en 48hs</td></tr>
+  <tr><td colspan="3" class="e-interesado">Interesado</td><td colspan="2"></td><td colspan="4"></td><td colspan="8">Mandar formulario ADN</td></tr>
+  <tr><td colspan="3" class="e-adn">ADN enviado</td><td colspan="2"></td><td colspan="4"></td><td colspan="8">Esperar ADN, recordar en 3 días</td></tr>
+  <tr><td colspan="3" class="e-propuesta">Propuesta enviada</td><td colspan="2"></td><td colspan="4"></td><td colspan="8">Cerrar: definir pago y fecha inicio</td></tr>
+  <tr><td colspan="3" class="e-cliente">CLIENTES ACTIVOS</td><td colspan="2"></td><td colspan="4"></td><td colspan="8">Entrega en plazo + soporte</td></tr>
+  <tr><td colspan="3" class="e-descartado">Descartados</td><td colspan="2"></td><td colspan="4"></td><td colspan="8">Revisar en 30 días, pueden volver</td></tr>
+
+  <!-- PIE -->
+  <tr><td colspan="17" style="height:20px; background:#fff; border:none;"></td></tr>
+  <tr>
+    <td colspan="17" style="background:#111010; color:#888; font-size:8.5pt; text-align:center; padding:6px;">
+      Atlantic Web — CRM v1.0 — Abril 2026 — Actualizar después de cada contacto
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>
